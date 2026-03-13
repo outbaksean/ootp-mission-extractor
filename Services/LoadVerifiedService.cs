@@ -451,8 +451,23 @@ public class LoadVerifiedService
         if (m.Type == null)
             errors.Add("type is invalid or missing");
 
+        var normalizedCategory = LightweightValidationService.NormalizeCategory(m.Category);
         if (!AvailableCategories.Contains(m.Category?.Trim() ?? ""))
+        {
             errors.Add($"category '{m.Category}' is not in available categories");
+        }
+        else if (normalizedCategory != (m.Category?.Trim() ?? ""))
+        {
+            if (clean)
+            {
+                warnings.Add($"category casing corrected: '{m.Category?.Trim()}' -> '{normalizedCategory}'");
+                m.Category = normalizedCategory;
+            }
+            else
+            {
+                errors.Add($"category '{m.Category?.Trim()}' has incorrect casing (expected '{normalizedCategory}')");
+            }
+        }
 
         if (m.Cards.Any(c => c.CardId == 0))
             errors.Add("one or more cards has cardId 0");

@@ -46,6 +46,19 @@ public class LightweightValidationService
         CategoryOrder.Select((c, i) => (c, i))
                      .ToDictionary(x => x.c, x => x.i, StringComparer.OrdinalIgnoreCase);
 
+    private static readonly IReadOnlyDictionary<string, string> CategoryCanonicalMap =
+        CategoryOrder.ToDictionary(c => c.ToLowerInvariant(), c => c);
+
+    /// <summary>
+    /// Returns the canonical casing for a known category name, or the trimmed input if unrecognized.
+    /// </summary>
+    public static string NormalizeCategory(string? category)
+    {
+        if (string.IsNullOrWhiteSpace(category)) return category ?? string.Empty;
+        var trimmed = category.Trim();
+        return CategoryCanonicalMap.TryGetValue(trimmed.ToLowerInvariant(), out var canonical) ? canonical : trimmed;
+    }
+
     private static int GetCategoryPriority(string? cat) =>
         cat != null && CategoryPriority.TryGetValue(cat, out var i) ? i : int.MaxValue;
 
@@ -248,6 +261,11 @@ public class LightweightValidationService
             int bracketIndex = mission.Name.LastIndexOf('[');
             if (bracketIndex >= 0)
                 mission.Name = mission.Name[..bracketIndex].TrimEnd();
+
+            var normalizedCategory = NormalizeCategory(mission.Category);
+            if (!string.IsNullOrWhiteSpace(mission.Category) && normalizedCategory != mission.Category.Trim())
+                Console.WriteLine($"Corrected category casing: '{mission.Category.Trim()}' -> '{normalizedCategory}'");
+            mission.Category = normalizedCategory;
 
             if (mission.Type == MissionType.Missions)
                 continue;

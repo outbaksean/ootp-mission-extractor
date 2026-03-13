@@ -1,5 +1,5 @@
 ## TODO
-- Fix casing for category
+- Fix casing for category - On transform each category should be updated to have the first letter of every word be capital
 - Try substring search for card title mapping
 - [PartlyDone] Update boundaries
 - Update live mission helper page to work with ootp27 card list
