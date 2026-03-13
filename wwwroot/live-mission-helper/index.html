@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Live Mission Helper</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: monospace; font-size: 13px; background: #fff; color: #111; margin: 0; padding: 16px; }
+nav { margin-bottom: 12px; font-size: 12px; }
+h1 { font-size: 1em; margin: 0 0 14px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+button { font-family: monospace; font-size: 13px; padding: 4px 10px; cursor: pointer; border: 1px solid #999; background: #f4f4f4; }
+button:hover { background: #e4e4e4; }
+select { font-family: monospace; font-size: 13px; padding: 3px 6px; border: 1px solid #bbb; }
+label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+#status { font-size: 12px; color: #555; }
+#results { margin-top: 4px; }
+#results-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+#results-title { font-size: 1em; margin: 0; font-weight: bold; }
+#output { background: #f8f8f8; border: 1px solid #ddd; padding: 8px 10px; font-size: 12px; white-space: pre; overflow-x: auto; max-height: 60vh; overflow-y: auto; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/">Mission Extractor</a> &nbsp;|&nbsp;
+  <a href="/manage-missions/">Manage Missions</a> &nbsp;|&nbsp;
+  <strong>Live Mission Helper</strong>
+</nav>
+<h1>Live Mission Helper</h1>
+
+<div class="controls">
+  <select id="team-select">
+    <option value="">-- Select Team --</option>
+    <option>AZ</option>
+    <option>ATH</option>
+    <option>ATL</option>
+    <option>BAL</option>
+    <option>BOS</option>
+    <option>CHC</option>
+    <option>CIN</option>
+    <option>CLE</option>
+    <option>COL</option>
+    <option>CWS</option>
+    <option>DET</option>
+    <option>HOU</option>
+    <option>KC</option>
+    <option>LAA</option>
+    <option>LAD</option>
+    <option>MIA</option>
+    <option>MIL</option>
+    <option>MIN</option>
+    <option>NYM</option>
+    <option>NYY</option>
+    <option>PHI</option>
+    <option>PIT</option>
+    <option>SD</option>
+    <option>SEA</option>
+    <option>SF</option>
+    <option>STL</option>
+    <option>TB</option>
+    <option>TEX</option>
+    <option>TOR</option>
+    <option>WSH</option>
+  </select>
+  <label><input type="checkbox" id="include-points"> Include points</label>
+  <button onclick="generatePTEliteMissions()">Generate PT Elite Missions</button>
+  <button onclick="addPTEliteToState()">Add PT Elite to State</button>
+  <span id="status"></span>
+</div>
+
+<div id="results" style="display:none">
+  <div id="results-header">
+    <span id="results-title"></span>
+    <button id="copy-all" onclick="copyAll()">Copy</button>
+  </div>
+  <pre id="output"></pre>
+</div>
+
+<script>
+let currentOutput = '';
+let ptEliteMissions = null;
+
+function cardValueToPoints(value) {
+  if (value < 60)  return 1;
+  if (value < 70)  return 2;
+  if (value < 80)  return 5;
+  if (value < 85)  return 10;
+  if (value < 90)  return 15;
+  if (value < 95)  return 50;
+  if (value < 100) return 75;
+  return 200;
+}
+
+async function getLiveCards() {
+  const team = document.getElementById('team-select').value;
+  if (!team) { setStatus('Please select a team.'); return; }
+
+  setStatus('Loading...');
+  document.getElementById('results').style.display = 'none';
+
+  let cards;
+  try {
+    const res = await fetch('/api/cards');
+    cards = await res.json();
+  } catch {
+    setStatus('Failed to load cards.');
+    return;
+  }
+
+  const includePoints = document.getElementById('include-points').checked;
+
+  const matches = cards.filter(c =>
+    c.title.startsWith('MLB 2025 Live') &&
+    c.title.split(' ').pop() === team
+  );
+
+  const cardObjects = matches.map(c => {
+    const obj = { cardId: c.cardId };
+    if (includePoints) obj.points = cardValueToPoints(c.cardValue);
+    return obj;
+  });
+
+  currentOutput = `"cards": ${JSON.stringify(cardObjects, null, 2)},`;
+
+  document.getElementById('results-title').textContent = `${matches.length} live card(s) for ${team}`;
+  document.getElementById('output').textContent = currentOutput;
+  document.getElementById('results').style.display = '';
+  setStatus('');
+}
+
+function copyAll() {
+  if (!currentOutput) return;
+  navigator.clipboard.writeText(currentOutput).then(() => {
+    const btn = document.getElementById('copy-all');
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+  });
+}
+
+async function generatePTEliteMissions() {
+  const teams = ['AZ','ATH','ATL','BAL','BOS','CHC','CIN','CLE','COL','CWS','DET','HOU','KC','LAA','LAD','MIA','MIL','MIN','NYM','NYY','PHI','PIT','SD','SEA','SF','STL','TB','TEX','TOR','WSH'];
+
+  setStatus('Loading...');
+  document.getElementById('results').style.display = 'none';
+
+  let cards;
+  try {
+    const res = await fetch('/api/cards');
+    cards = await res.json();
+  } catch {
+    setStatus('Failed to load cards.');
+    return;
+  }
+
+  const missions = teams.map((team, i) => {
+    const matches = cards.filter(c =>
+      c.title.startsWith('MLB 2025 Live') &&
+      c.title.split(' ').pop() === team
+    );
+    const cardObjects = matches.map(c => ({ cardId: c.cardId }));
+    return {
+      id: 1001 + i,
+      category: 'PT Elite',
+      name: `PT Elite - ${team}`,
+      type: 'count',
+      reward: '',
+      cards: cardObjects,
+      requiredCount: cardObjects.length,
+      totalPoints: cardObjects.length
+    };
+  });
+
+  ptEliteMissions = missions;
+  currentOutput = missions.map(m => JSON.stringify(m, null, 2)).join(',\n') + ',';
+  document.getElementById('results-title').textContent = `PT Elite Missions (${missions.length} teams)`;
+  document.getElementById('output').textContent = currentOutput;
+  document.getElementById('results').style.display = '';
+  setStatus('');
+}
+
+async function addPTEliteToState() {
+  if (!ptEliteMissions) { setStatus('Generate PT Elite Missions first.'); return; }
+
+  setStatus('Adding to state...');
+  let existing;
+  try {
+    const res = await fetch('/api/missions');
+    const data = await res.json();
+    existing = data.missions ?? [];
+  } catch {
+    setStatus('Failed to fetch current missions.');
+    return;
+  }
+
+  const combined = [...existing, ...ptEliteMissions];
+  try {
+    const res = await fetch('/api/missions/import', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(combined)
+    });
+    const data = await res.json();
+    setStatus(`Added. State now has ${data.missionCount} missions.`);
+  } catch {
+    setStatus('Failed to import missions.');
+  }
+}
+
+function setStatus(msg) {
+  document.getElementById('status').textContent = msg;
+}
+
+document.getElementById('team-select').addEventListener('change', () => {
+  if (document.getElementById('team-select').value) getLiveCards();
+  else document.getElementById('results').style.display = 'none';
+});
+
+document.getElementById('include-points').addEventListener('change', () => {
+  if (currentOutput) getLiveCards();
+});
+</script>
+</body>
+</html>

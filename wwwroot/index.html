@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mission Extractor</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: monospace; font-size: 13px; background: #fff; color: #111; margin: 0; padding: 0; height: 100vh; overflow: hidden; }
+
+/* Two-panel layout */
+#layout { display: flex; height: 100vh; }
+#left-panel { width: 65%; min-width: 200px; flex-shrink: 0; display: flex; flex-direction: column; }
+#left-panel-scroll { flex: 1; overflow-y: auto; padding: 16px; }
+#left-panel-footer { padding: 8px 16px; border-top: 1px solid #ddd; background: #fff; flex-shrink: 0; }
+#divider { width: 6px; background: #ddd; cursor: col-resize; flex-shrink: 0; }
+#divider:hover, #divider.dragging { background: #aaa; }
+#right-panel { flex: 1; min-width: 150px; overflow-y: auto; padding: 16px; border-left: 1px solid #ddd; }
+
+/* Existing styles */
+h1 { font-size: 1em; margin: 0 0 12px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+button { font-family: monospace; font-size: 13px; padding: 4px 10px; cursor: pointer; border: 1px solid #999; background: #f4f4f4; }
+button:hover { background: #e4e4e4; }
+pre#log { background: #f8f8f8; border: 1px solid #ddd; padding: 8px; height: 120px; overflow-y: auto; margin: 0 0 12px; white-space: pre-wrap; word-break: break-all; font-size: 12px; }
+#missions { margin-top: 4px; }
+details { border: 1px solid #ddd; margin-bottom: 8px; }
+summary { padding: 6px 10px; cursor: pointer; background: #f4f4f4; font-weight: bold; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+.mission-body { padding: 10px 12px; }
+.field-row { margin-bottom: 10px; }
+.field-label { display: block; font-weight: bold; margin-bottom: 3px; color: #555; }
+.field-row input[type="text"] { font-family: monospace; font-size: 13px; padding: 3px 6px; border: 1px solid #bbb; width: 100%; max-width: 600px; }
+.error-star { color: #c00; font-weight: bold; margin-left: 4px; }
+.mission-errors { background: #fff8f8; border: 1px solid #f5c6c6; padding: 6px 10px; margin-bottom: 10px; font-size: 12px; color: #c00; }
+.mission-errors div { margin: 1px 0; }
+.mission-json { background: #f8f8f8; border: 1px solid #eee; padding: 8px 10px; margin-bottom: 10px; font-size: 11px; max-height: 200px; overflow-y: auto; white-space: pre; }
+.debug-imgs { margin-top: 4px; display: flex; flex-wrap: wrap; gap: 4px; }
+.debug-imgs img { max-height: 80px; image-rendering: pixelated; border: 1px solid #ccc; }
+.save-row { margin-top: 10px; display: flex; align-items: center; gap: 10px; }
+.save-status { font-size: 12px; color: #555; }
+.save-status.error { color: #c00; }
+.btn-delete { font-family: monospace; font-size: 13px; padding: 4px 10px; cursor: pointer; border: 1px solid #c00; background: #fff; color: #c00; }
+.btn-delete:hover { background: #fff0f0; }
+.detail-entry { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+.detail-entry input[type="text"] { flex: 1; max-width: 560px; }
+.detail-entry img { display: block; max-height: 80px; image-rendering: pixelated; border: 1px solid #ccc; }
+
+/* Boundaries panel */
+#boundaries { padding: 6px 0; border-top: 1px solid #eee; margin-bottom: 6px; }
+#boundaries-grid { display: grid; grid-template-columns: repeat(4, auto); gap: 4px 16px; margin-bottom: 6px; }
+.bnd-field { display: flex; align-items: center; gap: 5px; font-size: 12px; }
+.bnd-field label { color: #555; white-space: nowrap; }
+.bnd-field input { width: 4.5em; font-family: monospace; font-size: 12px; padding: 2px 4px; border: 1px solid #bbb; }
+
+/* Cards panel */
+#cards-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
+#cards-header h2 { font-size: 1em; margin: 0; flex-shrink: 0; }
+#cards-search { font-family: monospace; font-size: 13px; padding: 3px 6px; border: 1px solid #bbb; flex: 1; min-width: 80px; }
+#cards-count { font-size: 12px; color: #666; white-space: nowrap; }
+#cards-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+#cards-table th { text-align: left; padding: 4px 8px; border-bottom: 2px solid #ccc; background: #f4f4f4; cursor: pointer; white-space: nowrap; user-select: none; position: sticky; top: 0; }
+#cards-table th:hover { background: #e4e4e4; }
+#cards-table th.sort-asc::after { content: ' \25B2'; font-size: 10px; }
+#cards-table th.sort-desc::after { content: ' \25BC'; font-size: 10px; }
+#cards-table th:nth-child(3), #cards-table th:nth-child(4) { text-align: right; }
+#cards-table td { padding: 3px 8px; border-bottom: 1px solid #eee; }
+#cards-table td:nth-child(1) { padding: 2px 4px; }
+#cards-table td:nth-child(3), #cards-table td:nth-child(4) { text-align: right; }
+#cards-table tr:hover td { background: #f8f8f8; }
+</style>
+</head>
+<body>
+
+<div id="layout">
+  <div id="left-panel">
+    <div id="left-panel-scroll">
+      <nav style="margin-bottom:10px;font-size:12px;">
+        <strong>Mission Extractor</strong> &nbsp;|&nbsp; <a href="/manage-missions/">Manage Missions</a> &nbsp;|&nbsp; <a href="/live-mission-helper/">Live Mission Helper</a>
+      </nav>
+      <h1 id="page-title">Mission Extractor</h1>
+      <div id="verified-count" style="font-size:12px;color:#555;margin:-8px 0 10px;"></div>
+
+      <div class="controls">
+        <label>Row: <input type="number" id="capture-row" value="0" min="0" max="9" style="width:3em"></label>
+        <button onclick="runCapture()">Capture</button>
+        <button id="btn-capture-details-bottom" onclick="runCaptureDetailsBottom()" disabled>Capture More</button>
+        <button onclick="runCaptureMissionTypeDetails()">Capture Mission Type</button>
+        <button onclick="runCaptureNoImageOffsets()">Capture Without Images</button>
+      </div>
+      <div class="controls">
+        <button onclick="runTransform()">Transform</button>
+        <button onclick="runSaveWorking()">Save Scratch Missions</button>
+        <button onclick="runLoadWorking()">Load Scratch Missions</button>
+        <button onclick="runClearMissions()">Clear Missions</button>
+        <button id="btn-hide-verified" onclick="toggleHideVerified()">Hide Verified</button>
+      </div>
+
+      <pre id="log">Ready.</pre>
+
+      <div id="missions"></div>
+    </div>
+    <div id="left-panel-footer">
+      <div id="boundaries" style="display:none">
+        <div id="boundaries-grid">
+          <div class="bnd-field"><label>TopRowOffset</label><input type="number" id="bnd-topRowOffset"></div>
+          <div class="bnd-field"><label>TopRow</label><input type="number" id="bnd-topRow"></div>
+          <div class="bnd-field"><label>RowHeight</label><input type="number" id="bnd-rowHeight"></div>
+          <div class="bnd-field"><label>NumRows</label><input type="number" id="bnd-numRows"></div>
+          <div class="bnd-field"><label>CategoryLeft</label><input type="number" id="bnd-categoryLeft"></div>
+          <div class="bnd-field"><label>CategoryRight</label><input type="number" id="bnd-categoryRight"></div>
+          <div class="bnd-field"><label>TitleLeft</label><input type="number" id="bnd-titleLeft"></div>
+          <div class="bnd-field"><label>TitleRight</label><input type="number" id="bnd-titleRight"></div>
+          <div class="bnd-field"><label>RewardLeft</label><input type="number" id="bnd-rewardLeft"></div>
+          <div class="bnd-field"><label>RewardRight</label><input type="number" id="bnd-rewardRight"></div>
+          <div class="bnd-field"><label>StatusLeft</label><input type="number" id="bnd-statusLeft"></div>
+          <div class="bnd-field"><label>StatusRight</label><input type="number" id="bnd-statusRight"></div>
+          <div class="bnd-field"><label>DetailLeft</label><input type="number" id="bnd-detailLeft"></div>
+          <div class="bnd-field"><label>DetailWidth</label><input type="number" id="bnd-detailWidth"></div>
+          <div class="bnd-field"><label>DetailColumns</label><input type="number" id="bnd-detailColumns"></div>
+          <div class="bnd-field"><label>DetailHeight</label><input type="number" id="bnd-detailHeight"></div>
+          <div class="bnd-field"><label>DetailUpperOffsetY</label><input type="number" id="bnd-detailUpperOffsetY"></div>
+          <div class="bnd-field"><label>DetailSkipY</label><input type="number" id="bnd-detailSkipY"></div>
+          <div class="bnd-field"><label>DetailNoImagesHeight</label><input type="number" id="bnd-detailNoImagesHeight"></div>
+          <div class="bnd-field"><label>DetailLowerOffsetY</label><input type="number" id="bnd-detailLowerOffsetY"></div>
+        </div>
+        <button onclick="applyBoundaries()">Apply Boundaries</button>
+      </div>
+      <div class="controls" style="margin-bottom:0">
+        <button onclick="runValidate()">Validate</button>
+        <button onclick="runLoadVerified()">Load Verified Missions</button>
+        <button onclick="runSaveDialog()">Save As...</button>
+        <button onclick="runLoadDialog()">Load From...</button>
+        <button onclick="runDeleteDebugImages()">Delete Debug Images</button>
+        <button onclick="runSaveVerified()">Save Verified Missions</button>
+        <button onclick="runLoadAndCleanVerified()">Load and Clean Verified Missions</button>
+        <input type="file" id="file-input-verified" accept=".json" style="display:none">
+        <input type="file" id="file-input" accept=".json" style="display:none">
+      </div>
+    </div>
+  </div>
+
+  <div id="divider"></div>
+
+  <div id="right-panel">
+    <div id="cards-header">
+      <h2>Shop Cards</h2>
+      <input type="text" id="cards-search" placeholder="Filter by title...">
+      <span id="cards-count"></span>
+    </div>
+    <table id="cards-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th data-col="title">Title</th>
+          <th data-col="cardId">Card ID</th>
+          <th data-col="cardValue">Value</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+// ── Missions state ─────────────────────────────────────────────────────────────
+
+let fieldErrors = {};
+let cachedMissions = [];
+let hideVerified = false;
+
+function errorTypeToField(errorType) {
+  if (errorType === 'Name Blank') return 'name';
+  if (errorType.startsWith('Category')) return 'category';
+  if (errorType === 'Reward Blank') return 'reward';
+  if (errorType === 'Status Blank' || errorType === 'Type Unparsed') return 'status';
+  return 'missionDetails';
+}
+
+function buildErrorMap(errors) {
+  const map = {};
+  for (const e of errors) {
+    if (!map[e.missionId]) map[e.missionId] = [];
+    map[e.missionId].push(e.errorType);
+  }
+  return map;
+}
+
+function setLog(text) {
+  document.getElementById('log').textContent = text;
+}
+
+function appendLog(text) {
+  const el = document.getElementById('log');
+  el.textContent += text;
+  el.scrollTop = el.scrollHeight;
+}
+
+function updateTitle(count) {
+  document.getElementById('page-title').textContent =
+    'Mission Extractor \u2014 ' + count + ' mission(s)';
+  document.getElementById('btn-capture-details-bottom').disabled = count === 0;
+}
+
+async function refreshMissions() {
+  const res = await fetch('/api/missions');
+  const data = await res.json();
+  cachedMissions = data.missions;
+  updateTitle(data.count);
+  applyAndRenderMissions();
+}
+
+function applyAndRenderMissions() {
+  const verified = cachedMissions.filter(m => m.verified).length;
+  const unverified = cachedMissions.length - verified;
+  document.getElementById('verified-count').textContent =
+    cachedMissions.length > 0 ? `${verified} verified, ${unverified} unverified` : '';
+  const toShow = hideVerified ? cachedMissions.filter(m => !m.verified) : cachedMissions;
+  renderMissions(toShow);
+}
+
+function toggleHideVerified() {
+  hideVerified = !hideVerified;
+  const btn = document.getElementById('btn-hide-verified');
+  btn.textContent = hideVerified ? 'Show Verified' : 'Hide Verified';
+  btn.style.fontWeight = hideVerified ? 'bold' : '';
+  applyAndRenderMissions();
+}
+
+function renderMissions(missions) {
+  const container = document.getElementById('missions');
+  container.innerHTML = '';
+  for (const m of missions) {
+    container.appendChild(buildMissionElement(m));
+  }
+}
+
+function buildActionRow(m) {
+  const saveRow = document.createElement('div');
+  saveRow.className = 'save-row';
+
+  if (m.readOnly) {
+    const badge = document.createElement('span');
+    badge.className = 'save-status';
+    badge.textContent = 'Imported (read-only)';
+    saveRow.appendChild(badge);
+  } else {
+    const saveBtn = document.createElement('button');
+    saveBtn.textContent = 'Save';
+    saveBtn.onclick = function() { saveMission(this); };
+    const saveStatus = document.createElement('span');
+    saveStatus.className = 'save-status';
+    saveRow.appendChild(saveBtn);
+    saveRow.appendChild(saveStatus);
+
+    const hasErrors = (fieldErrors[m.id] ?? []).length > 0;
+    if (!hasErrors || m.verified) {
+      const verifyBtn = document.createElement('button');
+      verifyBtn.textContent = m.verified ? 'Unverify' : 'Mark Verified';
+      if (m.verified) verifyBtn.style.cssText = 'border-color: #090; color: #090;';
+      verifyBtn.onclick = function() { toggleVerify(m.id, !m.verified); };
+      saveRow.appendChild(verifyBtn);
+    }
+  }
+
+  const transformBtn = document.createElement('button');
+  transformBtn.textContent = 'Transform';
+  transformBtn.onclick = function() { runTransform(); };
+  saveRow.appendChild(transformBtn);
+
+  const deleteBtn = document.createElement('button');
+  deleteBtn.textContent = 'Delete Mission';
+  deleteBtn.className = 'btn-delete';
+  deleteBtn.onclick = function() { deleteMission(this); };
+  saveRow.appendChild(deleteBtn);
+
+  return saveRow;
+}
+
+function buildMissionElement(m) {
+  const det = document.createElement('details');
+  det.dataset.id = m.id;
+
+  const sum = document.createElement('summary');
+  sum.textContent = summaryText(m);
+  det.appendChild(sum);
+
+  const body = document.createElement('div');
+  body.className = 'mission-body';
+
+  body.appendChild(buildActionRow(m));
+
+  const missionErrorTypes = fieldErrors[m.id] ?? [];
+
+  if (missionErrorTypes.length > 0) {
+    const errBlock = document.createElement('div');
+    errBlock.className = 'mission-errors';
+    for (const e of missionErrorTypes) {
+      const row = document.createElement('div');
+      row.textContent = e;
+      errBlock.appendChild(row);
+    }
+    body.appendChild(errBlock);
+  }
+
+  for (const field of ['name', 'category', 'reward', 'status']) {
+    body.appendChild(buildTextField(field, m[field] ?? '', m.debugImages, missionErrorTypes, m.readOnly));
+  }
+
+  const jsonDetails = document.createElement('details');
+  const jsonSummary = document.createElement('summary');
+  jsonSummary.textContent = 'JSON';
+  jsonDetails.appendChild(jsonSummary);
+  const { status, missionDetails, debugImages, ...finalFields } = m;
+  const pre = document.createElement('pre');
+  pre.className = 'mission-json';
+  pre.textContent = JSON.stringify(finalFields, null, 2);
+  jsonDetails.appendChild(pre);
+  body.appendChild(jsonDetails);
+
+  body.appendChild(buildDetailsField(m.missionDetails ?? [], m.debugImages, missionErrorTypes, m.readOnly));
+
+  body.appendChild(buildActionRow(m));
+
+  det.appendChild(body);
+  return det;
+}
+
+function summaryText(m) {
+  return (m.readOnly ? '[R] ' : '') + '[' + m.id + '] ' + (m.name || '') +
+    '  (' + (m.category || '') + ')' +
+    '  |  ' + (m.type || '') +
+    '  |  ' + (m.status || '');
+}
+
+function buildTextField(field, value, debugImages, missionErrorTypes, readOnly = false) {
+  const row = document.createElement('div');
+  row.className = 'field-row';
+
+  const hasError = missionErrorTypes.some(e => errorTypeToField(e) === field);
+
+  const label = document.createElement('label');
+  label.className = 'field-label';
+  label.textContent = field;
+  if (hasError) {
+    const star = document.createElement('span');
+    star.className = 'error-star';
+    star.textContent = '*';
+    label.appendChild(star);
+  }
+  row.appendChild(label);
+
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.dataset.field = field;
+  input.value = value;
+  if (readOnly) input.disabled = true;
+  row.appendChild(input);
+
+  if (field === 'status' && !readOnly) {
+    const btnRow = document.createElement('div');
+    btnRow.style.cssText = 'display:flex;gap:6px;margin-top:4px;';
+    const presets = [
+      { label: 'Set Type Count',    value: '0 / 1 out of 1' },
+      { label: 'Set Type Points',   value: '0 / 1 Points' },
+      { label: 'Set Type Missions', value: '0 / 1 Missions' },
+    ];
+    for (const preset of presets) {
+      const btn = document.createElement('button');
+      btn.textContent = preset.label;
+      btn.onclick = function() { input.value = preset.value; };
+      btnRow.appendChild(btn);
+    }
+    row.appendChild(btnRow);
+  }
+
+  const imgs = debugImages?.[field];
+  if (imgs && imgs.length > 0) {
+    const imgContainer = document.createElement('div');
+    imgContainer.className = 'debug-imgs';
+    for (const imgPath of imgs) {
+      const filename = imgPath.split(/[\\/]/).pop();
+      const img = document.createElement('img');
+      img.src = '/debug-images/' + filename;
+      img.alt = field + ' debug image';
+      imgContainer.appendChild(img);
+    }
+    row.appendChild(imgContainer);
+  }
+
+  return row;
+}
+
+function buildDetailsField(details, debugImages, missionErrorTypes, readOnly = false) {
+  const row = document.createElement('div');
+  row.className = 'field-row';
+
+  const detailErrors = missionErrorTypes.filter(e => errorTypeToField(e) === 'missionDetails');
+  const errorIndices = new Set();
+  let aggregateError = false;
+
+  for (const e of detailErrors) {
+    let target = null;
+    if (e.startsWith('Card Not Found: '))
+      target = e.slice('Card Not Found: '.length).trim();
+    else if (e.startsWith('Mission Not Found: '))
+      target = e.slice('Mission Not Found: '.length).trim();
+    else if (e.startsWith('Points Mismatch: '))
+      target = e.slice('Points Mismatch: '.length).replace(/ \(expected.*/, '').trim();
+
+    if (target !== null)
+      details.forEach((d, i) => { if (d.trim() === target) errorIndices.add(i); });
+    else
+      aggregateError = true;
+  }
+
+  const label = document.createElement('label');
+  label.className = 'field-label';
+  label.textContent = 'missionDetails';
+  if (aggregateError) {
+    const star = document.createElement('span');
+    star.className = 'error-star';
+    star.textContent = '*';
+    label.appendChild(star);
+  }
+  row.appendChild(label);
+
+  const imgs = debugImages?.['missionDetails'] ?? [];
+  const count = Math.max(details.length, 1);
+
+  for (let i = 0; i < count; i++) {
+    const entry = document.createElement('div');
+    entry.className = 'detail-entry';
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.dataset.field = 'missionDetails';
+    input.value = details[i] ?? '';
+    input.addEventListener('focus', function() { this.select(); });
+    if (readOnly) input.disabled = true;
+    entry.appendChild(input);
+
+    if (errorIndices.has(i)) {
+      const star = document.createElement('span');
+      star.className = 'error-star';
+      star.textContent = '*';
+      entry.appendChild(star);
+    }
+
+    if (!readOnly) {
+      const removeBtn = document.createElement('button');
+      removeBtn.textContent = 'Remove';
+      removeBtn.className = 'btn-delete';
+      removeBtn.onclick = function() { entry.remove(); };
+      entry.appendChild(removeBtn);
+    }
+
+    if (i < imgs.length) {
+      const filename = imgs[i].split(/[\\/]/).pop();
+      const img = document.createElement('img');
+      img.src = '/debug-images/' + filename;
+      img.alt = 'missionDetails debug image';
+      entry.appendChild(img);
+    }
+
+    row.appendChild(entry);
+  }
+
+  return row;
+}
+
+async function saveMission(btn) {
+  const det = btn.closest('details');
+  const id = parseInt(det.dataset.id, 10);
+  const statusEl = btn.nextElementSibling;
+
+  const body = {};
+  for (const input of det.querySelectorAll('input[data-field]:not([data-field="missionDetails"])')) {
+    body[input.dataset.field] = input.value;
+  }
+  body.missionDetails = Array.from(det.querySelectorAll('input[data-field="missionDetails"]'))
+    .map(i => i.value.trim())
+    .filter(s => s.length > 0);
+
+  const res = await fetch('/api/missions/' + id, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+
+  if (res.ok) {
+    const updated = await res.json();
+    det.querySelector('summary').textContent = summaryText(updated);
+    statusEl.className = 'save-status';
+    statusEl.textContent = 'Saved.';
+    setTimeout(() => { statusEl.textContent = ''; }, 2000);
+  } else {
+    statusEl.className = 'save-status error';
+    statusEl.textContent = 'Save failed (' + res.status + ')';
+  }
+}
+
+async function toggleVerify(id, verified) {
+  const res = await fetch('/api/missions/' + id + '/verify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ verified })
+  });
+  if (res.ok) refreshMissions();
+}
+
+async function deleteMission(btn) {
+  const det = btn.closest('details');
+  const id = parseInt(det.dataset.id, 10);
+  const res = await fetch('/api/missions/' + id, { method: 'DELETE' });
+  if (res.ok) {
+    delete fieldErrors[id];
+    det.remove();
+    const data = await res.json();
+    updateTitle(data.missionCount);
+  } else {
+    btn.nextElementSibling
+      ? btn.nextElementSibling.textContent = 'Delete failed'
+      : btn.insertAdjacentText('afterend', ' Delete failed');
+  }
+}
+
+function handlePipelineResponse(data) {
+  fieldErrors = data.errors?.length > 0 ? buildErrorMap(data.errors) : {};
+  let logText = data.log ?? '';
+  if (data.errors && data.errors.length > 0) {
+    logText += '\n\n' + data.errors.length + ' validation error(s):\n';
+    for (const e of data.errors) {
+      logText += '  Mission ' + e.missionId + ' (' + e.missionName + '): ' + e.errorType + '\n';
+    }
+  }
+  setLog(logText);
+  refreshMissions();
+}
+
+function getCaptureRow() {
+  return parseInt(document.getElementById('capture-row').value, 10) || 0;
+}
+
+async function runCapture() {
+  fieldErrors = {};
+  setLog('Capturing...');
+  const res = await fetch('/api/capture', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ captureRow: getCaptureRow() })
+  });
+  const data = await res.json();
+  setLog(data.log || '');
+  refreshMissions();
+}
+
+async function runCaptureNoImageOffsets() {
+  fieldErrors = {};
+  setLog('Capturing without images...');
+  const res = await fetch('/api/capture', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ captureRow: getCaptureRow(), noImageOffsets: true })
+  });
+  const data = await res.json();
+  setLog(data.log || '');
+  refreshMissions();
+}
+
+async function runCaptureMissionTypeDetails() {
+  fieldErrors = {};
+  setLog('Capturing mission type details...');
+  const res = await fetch('/api/capture-mission-type-details', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ captureRow: getCaptureRow() })
+  });
+  const data = await res.json();
+  setLog(data.log || '');
+  refreshMissions();
+}
+
+async function runCaptureDetailsBottom() {
+  fieldErrors = {};
+  setLog('Capturing more details...');
+  const res = await fetch('/api/capture-details-bottom', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ captureRow: getCaptureRow() })
+  });
+  if (!res.ok) {
+    const data = await res.json();
+    setLog(data.error ?? 'Error');
+    return;
+  }
+  const data = await res.json();
+  setLog(data.log ?? '');
+  refreshMissions();
+}
+
+async function runValidate() {
+  setLog('Validating...');
+  const res = await fetch('/api/validate', { method: 'POST' });
+  if (!res.ok) {
+    const data = await res.json();
+    setLog(data.error ?? 'Error');
+    return;
+  }
+  handlePipelineResponse(await res.json());
+}
+
+async function runTransform() {
+  setLog('Transforming...');
+  const res = await fetch('/api/transform', { method: 'POST' });
+  if (!res.ok) {
+    const data = await res.json();
+    setLog(data.error ?? 'Error');
+    return;
+  }
+  handlePipelineResponse(await res.json());
+}
+
+function runLoadVerified() {
+  const input = document.getElementById('file-input-verified');
+  input.dataset.endpoint = '/api/load-verified';
+  input.click();
+}
+
+function runLoadAndCleanVerified() {
+  const input = document.getElementById('file-input-verified');
+  input.dataset.endpoint = '/api/load-verified-clean';
+  input.click();
+}
+
+document.getElementById('file-input-verified').addEventListener('change', async function() {
+  const file = this.files[0];
+  if (!file) return;
+  const endpoint = this.dataset.endpoint || '/api/load-verified';
+  setLog('Loading verified missions...');
+  let parsed;
+  try {
+    parsed = JSON.parse(await file.text());
+  } catch {
+    setLog('Invalid JSON file.');
+    this.value = '';
+    return;
+  }
+
+  // Only accept the { "version": "...", "missions": [...] } wrapper format
+  if (Array.isArray(parsed) || !Array.isArray(parsed.missions)) {
+    setLog('Invalid format: expected a missions.json file with { "version": "...", "missions": [...] }');
+    this.value = '';
+    return;
+  }
+  const missions = parsed.missions;
+  if (missions.length === 0) { setLog('No missions found in file.'); this.value = ''; return; }
+
+  const res = await fetch(endpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ version: parsed.version, missions })
+  });
+  let data;
+  try {
+    data = await res.json();
+  } catch {
+    setLog('Load failed: server returned an unreadable response.');
+    this.value = '';
+    return;
+  }
+  if (!res.ok) { setLog(data.error ?? 'Load failed.'); this.value = ''; return; }
+  let msg = `Loaded ${data.loadedCount} verified mission(s).`;
+  if (data.markedVerifiedCount > 0) msg += ` Marked ${data.markedVerifiedCount} existing as verified.`;
+  if (data.errors.length > 0) {
+    msg += `\n${data.errors.length} error(s):\n` + data.errors.map(e => '  ' + e).join('\n');
+  }
+  setLog(msg);
+  refreshMissions();
+  this.value = '';
+});
+
+async function runSaveVerified() {
+  setLog('Saving verified missions...');
+  const res = await fetch('/api/save-verified', { method: 'POST' });
+  const data = await res.json();
+  if (!res.ok) { setLog(data.error ?? 'Error'); return; }
+  setLog(`Saved ${data.count} verified mission(s) to ${data.fileName}`);
+}
+
+async function runSaveWorking() {
+  setLog('Saving...');
+  const res = await fetch('/api/save-working', { method: 'POST' });
+  const data = await res.json();
+  if (!res.ok) { setLog(data.error ?? 'Error'); return; }
+  setLog(data.log ?? '');
+}
+
+async function runLoadWorking() {
+  setLog('Loading...');
+  const res = await fetch('/api/load-working', { method: 'POST' });
+  const data = await res.json();
+  if (!res.ok) { setLog(data.error ?? 'Error'); return; }
+  setLog(data.log ?? '');
+  refreshMissions();
+}
+
+async function runSaveDialog() {
+  const res = await fetch('/api/missions');
+  const data = await res.json();
+  if (data.count === 0) { setLog('No missions to save.'); return; }
+  const json = JSON.stringify(data.missions, null, 2);
+  if (window.showSaveFilePicker) {
+    try {
+      const handle = await window.showSaveFilePicker({
+        suggestedName: 'missions.json',
+        types: [{ description: 'JSON Files', accept: { 'application/json': ['.json'] } }]
+      });
+      const writable = await handle.createWritable();
+      await writable.write(json);
+      await writable.close();
+      setLog('Saved to ' + handle.name);
+    } catch (e) {
+      if (e.name !== 'AbortError') setLog('Save failed: ' + e.message);
+    }
+  } else {
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'missions.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    setLog('Saved missions.json (downloaded — open in Chrome/Edge for a save dialog)');
+  }
+}
+
+function runLoadDialog() {
+  document.getElementById('file-input').click();
+}
+
+document.getElementById('file-input').addEventListener('change', async function() {
+  const file = this.files[0];
+  if (!file) return;
+  setLog('Loading...');
+  let missions;
+  try {
+    missions = JSON.parse(await file.text());
+  } catch {
+    setLog('Invalid JSON file.');
+    this.value = '';
+    return;
+  }
+  const res = await fetch('/api/missions/import', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(missions)
+  });
+  const data = await res.json();
+  if (!res.ok) { setLog(data.error ?? 'Import failed.'); }
+  else { setLog('Loaded ' + data.missionCount + ' mission(s) from ' + file.name); refreshMissions(); }
+  this.value = '';
+});
+
+async function runClearMissions() {
+  fieldErrors = {};
+  const res = await fetch('/api/missions', { method: 'DELETE' });
+  const data = await res.json();
+  setLog('Missions cleared.');
+  refreshMissions();
+}
+
+async function runDeleteDebugImages() {
+  const res = await fetch('/api/debug-images', { method: 'DELETE' });
+  const data = await res.json();
+  setLog('Deleted ' + data.deletedCount + ' debug image(s).');
+  refreshMissions();
+}
+
+// ── Shop cards ─────────────────────────────────────────────────────────────────
+
+let allCards = [];
+let cardSortCol = 'title';
+let cardSortAsc = true;
+
+async function loadCards() {
+  const res = await fetch('/api/cards');
+  allCards = await res.json();
+  renderCards();
+}
+
+function renderCards() {
+  const filter = document.getElementById('cards-search').value.toLowerCase();
+  const filtered = filter
+    ? allCards.filter(c => c.title.toLowerCase().includes(filter))
+    : allCards.slice();
+
+  filtered.sort((a, b) => {
+    const av = a[cardSortCol], bv = b[cardSortCol];
+    const cmp = typeof av === 'number' ? av - bv : String(av).localeCompare(String(bv));
+    return cardSortAsc ? cmp : -cmp;
+  });
+
+  const tbody = document.querySelector('#cards-table tbody');
+  tbody.innerHTML = '';
+  for (const c of filtered) {
+    const tr = document.createElement('tr');
+
+    const tdCopy = document.createElement('td');
+    const copyBtn = document.createElement('button');
+    copyBtn.textContent = 'Copy';
+    copyBtn.style.cssText = 'padding:1px 5px;font-size:11px;';
+    copyBtn.onclick = function() {
+      navigator.clipboard.writeText(c.title).then(() => {
+        copyBtn.textContent = 'Copied';
+        setTimeout(() => { copyBtn.textContent = 'Copy'; }, 1200);
+      });
+    };
+    tdCopy.appendChild(copyBtn);
+
+    const tdTitle = document.createElement('td');
+    tdTitle.textContent = c.title;
+    const tdId = document.createElement('td');
+    tdId.textContent = c.cardId;
+    const tdVal = document.createElement('td');
+    tdVal.textContent = c.cardValue;
+    tr.appendChild(tdCopy);
+    tr.appendChild(tdTitle);
+    tr.appendChild(tdId);
+    tr.appendChild(tdVal);
+    tbody.appendChild(tr);
+  }
+
+  const countEl = document.getElementById('cards-count');
+  countEl.textContent = filter
+    ? filtered.length + ' / ' + allCards.length
+    : allCards.length + ' cards';
+
+  // Update sort indicators
+  for (const th of document.querySelectorAll('#cards-table th')) {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (th.dataset.col === cardSortCol)
+      th.classList.add(cardSortAsc ? 'sort-asc' : 'sort-desc');
+  }
+}
+
+document.querySelectorAll('#cards-table th').forEach(th => {
+  th.addEventListener('click', () => {
+    const col = th.dataset.col;
+    if (cardSortCol === col) {
+      cardSortAsc = !cardSortAsc;
+    } else {
+      cardSortCol = col;
+      cardSortAsc = col === 'title';
+    }
+    renderCards();
+  });
+});
+
+document.getElementById('cards-search').addEventListener('input', renderCards);
+document.getElementById('cards-search').addEventListener('focus', function() { this.select(); });
+
+// ── Divider drag ───────────────────────────────────────────────────────────────
+
+const divider = document.getElementById('divider');
+const leftPanel = document.getElementById('left-panel');
+const layout = document.getElementById('layout');
+let dragging = false;
+
+divider.addEventListener('mousedown', e => {
+  dragging = true;
+  divider.classList.add('dragging');
+  document.body.style.cursor = 'col-resize';
+  document.body.style.userSelect = 'none';
+  e.preventDefault();
+});
+
+document.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  const rect = layout.getBoundingClientRect();
+  const newWidth = e.clientX - rect.left;
+  leftPanel.style.width = Math.max(200, Math.min(newWidth, rect.width - 200)) + 'px';
+});
+
+document.addEventListener('mouseup', () => {
+  if (!dragging) return;
+  dragging = false;
+  divider.classList.remove('dragging');
+  document.body.style.cursor = '';
+  document.body.style.userSelect = '';
+});
+
+// ── Boundaries ─────────────────────────────────────────────────────────────────
+
+const boundaryFields = [
+  'topRowOffset', 'topRow', 'rowHeight', 'numRows',
+  'categoryLeft', 'categoryRight', 'titleLeft', 'titleRight',
+  'rewardLeft', 'rewardRight', 'statusLeft', 'statusRight',
+  'detailLeft', 'detailWidth', 'detailColumns', 'detailHeight',
+  'detailUpperOffsetY', 'detailSkipY', 'detailNoImagesHeight', 'detailLowerOffsetY'
+];
+
+async function loadBoundaries() {
+  const res = await fetch('/api/boundaries');
+  if (!res.ok) return;
+  const data = await res.json();
+  document.getElementById('boundaries').style.display = data.allowBoundryEdits ? '' : 'none';
+  if (!data.allowBoundryEdits) return;
+  for (const field of boundaryFields) {
+    const el = document.getElementById('bnd-' + field);
+    if (el) el.value = data.boundaries[field] ?? 0;
+  }
+}
+
+async function applyBoundaries() {
+  const body = {};
+  for (const field of boundaryFields) {
+    const el = document.getElementById('bnd-' + field);
+    body[field] = el ? parseInt(el.value, 10) || 0 : 0;
+  }
+  const res = await fetch('/api/boundaries', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if (res.ok) setLog('Boundaries applied.');
+  else setLog('Failed to apply boundaries.');
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────────
+
+refreshMissions();
+loadCards();
+loadBoundaries();
+</script>
+</body>
+</html>

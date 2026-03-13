@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM" />
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="../msix-packaging/msix-packaging.wapproj" Type="c7167f0d-bc9f-4e6e-afe1-012c56b48db5" Id="cc289870-c130-4749-bee0-2b4f586f027c">
+    <Deploy />
+  </Project>
+  <Project Path="mission-extractor.csproj" />
+</Solution>
