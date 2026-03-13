@@ -1,11 +1,17 @@
+using System.Text.RegularExpressions;
+
 namespace mission_extractor.Services;
 
 public record CardEntry(int CardId, int CardValue);
 
 public class CardMappingService
 {
+    private static readonly Regex StrippedTitlePattern =
+        new(@"\b(CL|SP|RP|1B|2B|3B|SS|LF|CF|RF|DH|C)\s.+$", RegexOptions.Compiled);
+
     private readonly Dictionary<string, CardEntry> _cards;
     private readonly Dictionary<int, string> _titleById;
+    private readonly Dictionary<string, (CardEntry Entry, string FullTitle)> _cardsByStrippedTitle;
 
     public CardMappingService(string csvPath)
     {
@@ -37,6 +43,32 @@ public class CardMappingService
         _titleById = new Dictionary<int, string>();
         foreach (var (title, entry) in _cards)
             _titleById.TryAdd(entry.CardId, title);
+
+        var ambiguous = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        _cardsByStrippedTitle = new Dictionary<string, (CardEntry, string)>(StringComparer.OrdinalIgnoreCase);
+        foreach (var (title, entry) in _cards)
+        {
+            var stripped = ExtractStrippedTitle(title);
+            if (stripped == null) continue;
+            if (ambiguous.Contains(stripped)) continue;
+            if (_cardsByStrippedTitle.ContainsKey(stripped))
+            {
+                _cardsByStrippedTitle.Remove(stripped);
+                ambiguous.Add(stripped);
+            }
+            else
+            {
+                _cardsByStrippedTitle[stripped] = (entry, title);
+            }
+        }
+        Console.WriteLine($"Built {_cardsByStrippedTitle.Count} stripped-title entries " +
+                          $"({ambiguous.Count} ambiguous skipped).");
+    }
+
+    private static string? ExtractStrippedTitle(string fullTitle)
+    {
+        var match = StrippedTitlePattern.Match(fullTitle);
+        return match.Success ? match.Value.TrimEnd() : null;
     }
 
     public IReadOnlyDictionary<string, CardEntry> Cards => _cards;
@@ -46,6 +78,19 @@ public class CardMappingService
 
     public bool TryLookupById(int cardId, out string title) =>
         _titleById.TryGetValue(cardId, out title!);
+
+    public bool TryLookupByStrippedTitle(string ocrText, out CardEntry entry, out string fullTitle)
+    {
+        if (_cardsByStrippedTitle.TryGetValue(ocrText.Trim(), out var found))
+        {
+            entry = found.Entry;
+            fullTitle = found.FullTitle;
+            return true;
+        }
+        entry = default!;
+        fullTitle = default!;
+        return false;
+    }
 
     // Parses "{cardValue} {position} {playerName}" and finds a card by player name substring + card value.
     // Returns true only if exactly one card matches.
