@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.FileProviders;
 using MissionExtractor.dto;
 using mission_extractor.Models;
@@ -460,7 +461,7 @@ app.MapDelete("/api/missions", () =>
 app.MapGet("/api/boundaries", () => new { allowBoundryEdits, boundaries = missionRowBoundries });
 
 // POST /api/boundaries
-app.MapPost("/api/boundaries", (MissionRowBoundries updated) =>
+app.MapPost("/api/boundaries", ([FromBody] MissionRowBoundries updated) =>
 {
     missionRowBoundries.TopRowOffset = updated.TopRowOffset;
     missionRowBoundries.TopRow = updated.TopRow;
