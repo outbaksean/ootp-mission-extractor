@@ -30,6 +30,7 @@ public class RewardMappingService
             ["Power Era Diamond Pack"] = PackType.PowerDiamond,
             ["Defensive Era Diamond Pack"] = PackType.DefensiveDiamond,
             ["Spotlight #Immortals Pack"] = PackType.SpotlightImmortals,
+            ["Artifact Pack"]             = PackType.Artifact,
         };
 
     private static readonly Dictionary<string, string> PackTypeToDisplayName =
@@ -91,6 +92,10 @@ public class RewardMappingService
                     : r.PackType ?? "Pack";
                 parts.Add(r.Count > 1 ? $"{r.Count}x {name}" : name);
             }
+            else if (r.Type.Equals("Artifact", StringComparison.OrdinalIgnoreCase))
+            {
+                parts.Add($"Artifact: {r.Artifact}");
+            }
             else if (r.Type.Equals("Card", StringComparison.OrdinalIgnoreCase) && r.CardId.HasValue)
             {
                 parts.Add(_cardMapping.TryLookupById(r.CardId.Value, out var title)
@@ -149,6 +154,13 @@ public class RewardMappingService
             return new MissionReward { Type = "Park", Park = parkName };
         }
 
+        // Artifact
+        if (token.StartsWith("Artifact:", StringComparison.OrdinalIgnoreCase))
+        {
+            var artifactName = token["Artifact:".Length..].Trim();
+            return new MissionReward { Type = "Artifact", Artifact = artifactName };
+        }
+
         // Pack — optional NUMx prefix
         int count = 1;
         var packCandidate = token;
@@ -194,6 +206,7 @@ public class RewardMappingService
             if (x.CardId != y.CardId) return false;
             if (x.Count != y.Count) return false;
             if (x.Park != y.Park) return false;
+            if (x.Artifact != y.Artifact) return false;
         }
 
         return true;

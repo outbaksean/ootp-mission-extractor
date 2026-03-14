@@ -25,4 +25,8 @@ public class MissionReward
     [JsonPropertyName("park")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Park { get; set; }
+
+    [JsonPropertyName("artifact")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? Artifact { get; set; }
 }
