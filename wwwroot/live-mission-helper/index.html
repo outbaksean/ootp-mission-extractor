@@ -66,6 +66,8 @@ label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
   <label><input type="checkbox" id="include-points"> Include points</label>
   <button onclick="generatePTEliteMissions()">Generate PT Elite Missions</button>
   <button onclick="addPTEliteToState()">Add PT Elite to State</button>
+  <button onclick="generateLiveLevelMissions()">Generate Live Level Missions</button>
+  <button onclick="addLiveLevelToState()">Add Live Level to State</button>
   <span id="status"></span>
 </div>
 
@@ -80,6 +82,40 @@ label { display: flex; align-items: center; gap: 5px; cursor: pointer; }
 <script>
 let currentOutput = '';
 let ptEliteMissions = null;
+let liveLevelMissions = null;
+
+const teamNames = {
+  AZ:  'Arizona Diamondbacks',
+  ATH: 'Athletics',
+  ATL: 'Atlanta Braves',
+  BAL: 'Baltimore Orioles',
+  BOS: 'Boston Red Sox',
+  CHC: 'Chicago Cubs',
+  CIN: 'Cincinnati Reds',
+  CLE: 'Cleveland Guardians',
+  COL: 'Colorado Rockies',
+  CWS: 'Chicago White Sox',
+  DET: 'Detroit Tigers',
+  HOU: 'Houston Astros',
+  KC:  'Kansas City Royals',
+  LAA: 'Los Angeles Angels',
+  LAD: 'Los Angeles Dodgers',
+  MIA: 'Miami Marlins',
+  MIL: 'Milwaukee Brewers',
+  MIN: 'Minnesota Twins',
+  NYM: 'New York Mets',
+  NYY: 'New York Yankees',
+  PHI: 'Philadelphia Phillies',
+  PIT: 'Pittsburgh Pirates',
+  SD:  'San Diego Padres',
+  SEA: 'Seattle Mariners',
+  SF:  'San Francisco Giants',
+  STL: 'St. Louis Cardinals',
+  TB:  'Tampa Bay Rays',
+  TEX: 'Texas Rangers',
+  TOR: 'Toronto Blue Jays',
+  WSH: 'Washington Nationals',
+};
 
 function cardValueToPoints(value) {
   if (value < 60)  return 1;
@@ -194,6 +230,96 @@ async function addPTEliteToState() {
   }
 
   const combined = [...existing, ...ptEliteMissions];
+  try {
+    const res = await fetch('/api/missions/import', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(combined)
+    });
+    const data = await res.json();
+    setStatus(`Added. State now has ${data.missionCount} missions.`);
+  } catch {
+    setStatus('Failed to import missions.');
+  }
+}
+
+async function generateLiveLevelMissions() {
+  const teams = ['AZ','ATH','ATL','BAL','BOS','CHC','CIN','CLE','COL','CWS','DET','HOU','KC','LAA','LAD','MIA','MIL','MIN','NYM','NYY','PHI','PIT','SD','SEA','SF','STL','TB','TEX','TOR','WSH'];
+
+  setStatus('Loading...');
+  document.getElementById('results').style.display = 'none';
+
+  let cards, rewardsData;
+  try {
+    const [cardsRes, rewardsRes] = await Promise.all([fetch('/api/cards'), fetch('/api/live-mission-rewards')]);
+    cards = await cardsRes.json();
+    rewardsData = await rewardsRes.json();
+  } catch {
+    setStatus('Failed to load data.');
+    return;
+  }
+
+  const rewardsMap = new Map(rewardsData.map(r => [r.name, r]));
+
+  const missions = [];
+  teams.forEach((team, i) => {
+    const teamName = teamNames[team] ?? team;
+    const matches = cards.filter(c =>
+      /^MLB \d+ Live\b/.test(c.title) &&
+      c.title.split(' ').pop() === team
+    );
+    const cardObjects = matches.map(c => ({ cardId: c.cardId }));
+
+    const l1 = rewardsMap.get(`Live Level 1 - ${teamName}`);
+    missions.push({
+      id: 2001 + i,
+      category: 'Live Series',
+      name: l1?.name ?? `Live Level 1 - ${teamName}`,
+      type: 'count',
+      reward: l1?.reward ?? `1x Standard Pack, Park: ${team} park`,
+      status: l1?.status ?? '',
+      cards: cardObjects,
+      requiredCount: 20,
+      totalPoints: cardObjects.length
+    });
+
+    const l2 = rewardsMap.get(`Live Level 2 - ${teamName}`);
+    missions.push({
+      id: 2031 + i,
+      category: 'Live Series',
+      name: l2?.name ?? `Live Level 2 - ${teamName}`,
+      type: 'count',
+      reward: l2?.reward ?? `1x Standard Pack, Park: ${team} park`,
+      status: l2?.status ?? '',
+      cards: cardObjects,
+      requiredCount: 21,
+      totalPoints: cardObjects.length
+    });
+  });
+
+  liveLevelMissions = missions;
+  currentOutput = missions.map(m => JSON.stringify(m, null, 2)).join(',\n') + ',';
+  document.getElementById('results-title').textContent = `Live Level Missions (${teams.length} teams, ${missions.length} missions)`;
+  document.getElementById('output').textContent = currentOutput;
+  document.getElementById('results').style.display = '';
+  setStatus('');
+}
+
+async function addLiveLevelToState() {
+  if (!liveLevelMissions) { setStatus('Generate Live Level Missions first.'); return; }
+
+  setStatus('Adding to state...');
+  let existing;
+  try {
+    const res = await fetch('/api/missions');
+    const data = await res.json();
+    existing = data.missions ?? [];
+  } catch {
+    setStatus('Failed to fetch current missions.');
+    return;
+  }
+
+  const combined = [...existing, ...liveLevelMissions];
   try {
     const res = await fetch('/api/missions/import', {
       method: 'POST',
