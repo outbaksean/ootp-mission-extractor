@@ -1030,12 +1030,12 @@ document.getElementById('file-input-final-format').addEventListener('change', as
     return;
   }
 
-  if (Array.isArray(parsed) || !Array.isArray(parsed.missions)) {
-    setLog('Invalid format: expected a missions.json file with { "version": "...", "missions": [...] }');
+  const missions = Array.isArray(parsed) ? parsed : parsed.missions;
+  if (!Array.isArray(missions)) {
+    setLog('Invalid format: expected a missions.json file with { "version": "...", "missions": [...] } or a plain array.');
     this.value = '';
     return;
   }
-  const missions = parsed.missions;
   if (missions.length === 0) { setLog('No missions found in file.'); this.value = ''; return; }
 
   const res = await fetch('/api/load-final-format', {
@@ -1233,12 +1233,12 @@ document.getElementById('file-input-and-clean-final-format').addEventListener('c
     return;
   }
 
-  if (Array.isArray(parsed) || !Array.isArray(parsed.missions)) {
-    setLog('Invalid format: expected a missions.json file with { "version": "...", "missions": [...] }');
+  const missions = Array.isArray(parsed) ? parsed : parsed.missions;
+  if (!Array.isArray(missions)) {
+    setLog('Invalid format: expected a missions.json file with { "version": "...", "missions": [...] } or a plain array.');
     this.value = '';
     return;
   }
-  const missions = parsed.missions;
   if (missions.length === 0) { setLog('No missions found in file.'); this.value = ''; return; }
 
   const res = await fetch('/api/load-and-clean-final-format', {

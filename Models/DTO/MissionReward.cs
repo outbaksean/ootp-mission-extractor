@@ -29,4 +29,8 @@ public class MissionReward
     [JsonPropertyName("artifact")]
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
     public string? Artifact { get; set; }
+
+    [JsonPropertyName("name")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? Sticker { get; set; }
 }

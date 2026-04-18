@@ -31,7 +31,8 @@ public class LightweightValidationService
         "Playoff Moments",
         "World Series Start",
         "Holiday Times",
-        "Final Mission Set"
+        "Final Mission Set",
+        "Packs"
     };
 
     public static readonly IReadOnlyList<string> CategoryOrder = new[]
@@ -39,7 +40,7 @@ public class LightweightValidationService
         "Live Series", "Pack Rewards", "Launch Deck", "Bonus Rewards",
         "Immortal Seasons", "Negro Leagues", "Hall of Fame", "Baseball Reference",
         "Future Legends", "Launch Plus", "PT Elite", "Playoff Moments",
-        "World Series Start", "Holiday Times", "Final Mission Set"
+        "World Series Start", "Holiday Times", "Final Mission Set", "Packs"
     };
 
     private static readonly IReadOnlyDictionary<string, int> CategoryPriority =

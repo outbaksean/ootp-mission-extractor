@@ -96,6 +96,10 @@ public class RewardMappingService
             {
                 parts.Add($"Artifact: {r.Artifact}");
             }
+            else if (r.Type.Equals("Sticker", StringComparison.OrdinalIgnoreCase))
+            {
+                parts.Add($"Sticker: {r.Sticker}");
+            }
             else if (r.Type.Equals("Card", StringComparison.OrdinalIgnoreCase) && r.CardId.HasValue)
             {
                 parts.Add(_cardMapping.TryLookupById(r.CardId.Value, out var title)
@@ -161,6 +165,13 @@ public class RewardMappingService
             return new MissionReward { Type = "Artifact", Artifact = artifactName };
         }
 
+        // Sticker
+        if (token.StartsWith("Sticker:", StringComparison.OrdinalIgnoreCase))
+        {
+            var stickerName = token["Sticker:".Length..].Trim();
+            return new MissionReward { Type = "Sticker", Sticker = stickerName };
+        }
+
         // Pack — optional NUMx prefix
         int count = 1;
         var packCandidate = token;
@@ -207,6 +218,7 @@ public class RewardMappingService
             if (x.Count != y.Count) return false;
             if (x.Park != y.Park) return false;
             if (x.Artifact != y.Artifact) return false;
+            if (x.Sticker != y.Sticker) return false;
         }
 
         return true;

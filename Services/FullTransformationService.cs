@@ -39,7 +39,8 @@ public class FullTransformationService
         "Playoff Moments",
         "World Series Start",
         "Holiday Times",
-        "Final Mission Set"
+        "Final Mission Set",
+        "Packs"
     };
 
     public List<ValidationError> Run()
