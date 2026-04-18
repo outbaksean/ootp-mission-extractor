@@ -102,6 +102,7 @@ summary::-webkit-details-marker { display: none; }
       </div>
       <div class="controls">
         <button onclick="runTransform()">Transform</button>
+        <button onclick="runTransformAndVerify()">Transform and Verify</button>
         <button onclick="runReorder()">Reorder</button>
         <button onclick="runSaveWorking()">Save Scratch Missions</button>
         <button onclick="runLoadWorking()">Load Scratch Missions</button>
@@ -112,6 +113,14 @@ summary::-webkit-details-marker { display: none; }
         <button onclick="runLoadVerified()">Load Verified Missions</button>
         <button onclick="runSaveVerified()">Save Verified Missions</button>
         <button onclick="runLoadAndCleanVerified()">Load and Clean Verified Missions</button>
+      </div>
+
+      <div class="controls" style="align-items:flex-start">
+        <textarea id="mission-type-paste" placeholder="Paste mission text here..." style="font-family:monospace;font-size:12px;padding:4px 6px;border:1px solid #bbb;width:400px;height:80px;resize:vertical;"></textarea>
+        <div style="display:flex;flex-direction:column;gap:6px;align-self:flex-start">
+          <button onclick="insertMissionTypeFromPaste()">Insert Mission Type Mission</button>
+          <span id="insert-mission-status" style="font-size:12px;color:#555;"></span>
+        </div>
       </div>
 
       <pre id="log">Ready.</pre>
@@ -577,6 +586,7 @@ const PACK_TYPE_NAMES = {
   MoneyballDiamond: 'Moneyball Era Diamond Pack', AnalyticsDiamond: 'Analytics Era Diamond Pack',
   PowerDiamond: 'Power Era Diamond Pack', DefensiveDiamond: 'Defensive Era Diamond Pack',
   SpotlightImmortals: 'Spotlight #Immortals Pack',
+  Artifact: 'Artifact Pack',
 };
 
 function generateRewardStringFromDOM(det) {
@@ -586,6 +596,9 @@ function generateRewardStringFromDOM(det) {
     if (type === 'park') {
       const park = entry.querySelector('[data-reward-field="park"]')?.value?.trim();
       if (park) parts.push(`Park: ${park}`);
+    } else if (type === 'artifact') {
+      const artifact = entry.querySelector('[data-reward-field="artifact"]')?.value?.trim();
+      if (artifact) parts.push(`Artifact: ${artifact}`);
     } else if (type === 'pack') {
       const packType = entry.querySelector('[data-reward-field="packType"]')?.value;
       const count = parseInt(entry.querySelector('[data-reward-field="count"]')?.value, 10) || 1;
@@ -671,6 +684,10 @@ function buildRewardEntry(reward, readOnly) {
     const lbl = document.createElement('span'); lbl.className = 'reward-field-label'; lbl.textContent = 'park:'; entry.appendChild(lbl);
     const inp = document.createElement('input'); inp.type = 'text'; inp.dataset.rewardField = 'park';
     inp.value = reward.park ?? ''; inp.disabled = readOnly; entry.appendChild(inp);
+  } else if (reward.type === 'artifact') {
+    const lbl = document.createElement('span'); lbl.className = 'reward-field-label'; lbl.textContent = 'artifact:'; entry.appendChild(lbl);
+    const inp = document.createElement('input'); inp.type = 'text'; inp.dataset.rewardField = 'artifact';
+    inp.value = reward.artifact ?? ''; inp.disabled = readOnly; inp.style.width = '220px'; entry.appendChild(inp);
   }
 
   if (reward.type === 'pack') {
@@ -705,7 +722,7 @@ function buildRewardsField(rewards, readOnly) {
   if (!readOnly) {
     const btnRow = document.createElement('div');
     btnRow.style.cssText = 'display:flex;gap:6px;margin-top:4px;';
-    for (const [type, label] of [['card', 'Add Card'], ['pack', 'Add Packs'], ['park', 'Add Parks']]) {
+    for (const [type, label] of [['card', 'Add Card'], ['pack', 'Add Packs'], ['park', 'Add Parks'], ['artifact', 'Add Artifact']]) {
       const btn = document.createElement('button');
       btn.textContent = label;
       btn.onclick = () => container.appendChild(buildRewardEntry({ type, count: 1 }, false));
@@ -725,6 +742,7 @@ function collectRewardsFromElement(det) {
     if (type === 'card') { const title = entry.querySelector('[data-reward-field="cardTitle"]')?.value?.trim(); if (title) { const card = allCards.find(c => c.title === title); if (card) obj.cardId = card.cardId; } }
     if (type === 'pack') { obj.packType = entry.querySelector('[data-reward-field="packType"]')?.value ?? null; }
     if (type === 'park') { obj.park = entry.querySelector('[data-reward-field="park"]')?.value ?? null; }
+    if (type === 'artifact') { obj.artifact = entry.querySelector('[data-reward-field="artifact"]')?.value?.trim() ?? null; }
     return obj;
   });
 }
@@ -854,6 +872,135 @@ async function runTransform() {
   handlePipelineResponse(await res.json());
 }
 
+async function runTransformAndVerify() {
+  setLog('Transforming...');
+  await saveAllRenderedMissions();
+  const res = await fetch('/api/transform', { method: 'POST' });
+  if (!res.ok) {
+    const data = await res.json();
+    setLog(data.error ?? 'Error');
+    return;
+  }
+
+  const data = await res.json();
+  fieldErrors = data.errors?.length > 0 ? buildErrorMap(data.errors) : {};
+
+  let logText = data.log ?? '';
+  if (data.errors && data.errors.length > 0) {
+    logText += '\n\n' + data.errors.length + ' validation error(s):\n';
+    for (const e of data.errors)
+      logText += '  Mission ' + e.missionId + ' (' + e.missionName + '): ' + e.errorType + '\n';
+  }
+  setLog(logText);
+
+  await refreshMissions();
+
+  const toVerify = cachedMissions.filter(m => !m.readOnly && !m.verified && !fieldErrors[m.id]);
+  let verifiedCount = 0;
+  for (const m of toVerify) {
+    const vRes = await fetch('/api/missions/' + m.id + '/verify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ verified: true })
+    });
+    if (vRes.ok) verifiedCount++;
+  }
+
+  if (verifiedCount > 0) {
+    appendLog('\nMarked ' + verifiedCount + ' mission(s) as verified.');
+    await refreshMissions();
+  }
+}
+
+function parseMissionTypeText(text) {
+  const nonBlank = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+  if (nonBlank.length === 0) return null;
+
+  const category = nonBlank[0];
+
+  const nameIdx = nonBlank.findIndex(l => /\[.+?\]/.test(l));
+  if (nameIdx === -1) return { error: 'Could not find name line (expected a line with square brackets).' };
+
+  const name = nonBlank[nameIdx];
+
+  const missionDetails = nonBlank.slice(1, nameIdx).filter(l =>
+    !/^you need to complete/i.test(l)
+  );
+
+  const afterName = nonBlank.slice(nameIdx + 1);
+
+  const statusLine = afterName.find(l => /[0-9o]\s*\/\s*\d+\s+(missions|points|out of)/i.test(l));
+
+  const rewardLine = afterName.find(l =>
+    l !== statusLine &&
+    !/^\d+\s+hour/i.test(l)
+  );
+
+  let requiredCount = missionDetails.length;
+  if (statusLine) {
+    const m = statusLine.match(/\/\s*(\d+)\s+missions/i);
+    if (m) requiredCount = parseInt(m[1], 10);
+  }
+
+  return {
+    category,
+    name,
+    reward: rewardLine ?? '',
+    status: statusLine ?? '',
+    missionDetails,
+    type: 'missions',
+    requiredCount,
+    totalPoints: missionDetails.length,
+  };
+}
+
+async function insertMissionTypeFromPaste() {
+  const text = document.getElementById('mission-type-paste').value;
+  const statusEl = document.getElementById('insert-mission-status');
+  statusEl.textContent = '';
+
+  const parsed = parseMissionTypeText(text);
+  if (!parsed) { statusEl.textContent = 'Nothing to parse.'; return; }
+  if (parsed.error) { statusEl.textContent = parsed.error; return; }
+
+  let existing;
+  try {
+    const res = await fetch('/api/missions');
+    const data = await res.json();
+    existing = data.missions ?? [];
+  } catch {
+    statusEl.textContent = 'Failed to fetch current missions.';
+    return;
+  }
+
+  const newMission = {
+    id: (existing.reduce((max, m) => Math.max(max, m.id ?? 0), 0)) + 1,
+    category: parsed.category,
+    name: parsed.name,
+    type: parsed.type,
+    requiredCount: parsed.requiredCount,
+    reward: parsed.reward,
+    status: parsed.status,
+    cards: [],
+    missionDetails: parsed.missionDetails,
+    totalPoints: parsed.totalPoints,
+  };
+
+  try {
+    const res = await fetch('/api/missions/import', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify([...existing, newMission])
+    });
+    const data = await res.json();
+    statusEl.textContent = 'Inserted. State now has ' + data.missionCount + ' missions.';
+    document.getElementById('mission-type-paste').value = '';
+    await refreshMissions();
+  } catch {
+    statusEl.textContent = 'Failed to import mission.';
+  }
+}
+
 function runLoadVerified() {
   const input = document.getElementById('file-input-verified');
   input.dataset.endpoint = '/api/load-verified';
@@ -883,12 +1030,12 @@ document.getElementById('file-input-final-format').addEventListener('change', as
     return;
   }
 
-  if (Array.isArray(parsed) || !Array.isArray(parsed.missions)) {
-    setLog('Invalid format: expected a missions.json file with { "version": "...", "missions": [...] }');
+  const missions = Array.isArray(parsed) ? parsed : parsed.missions;
+  if (!Array.isArray(missions)) {
+    setLog('Invalid format: expected a missions.json file with { "version": "...", "missions": [...] } or a plain array.');
     this.value = '';
     return;
   }
-  const missions = parsed.missions;
   if (missions.length === 0) { setLog('No missions found in file.'); this.value = ''; return; }
 
   const res = await fetch('/api/load-final-format', {
@@ -1086,12 +1233,12 @@ document.getElementById('file-input-and-clean-final-format').addEventListener('c
     return;
   }
 
-  if (Array.isArray(parsed) || !Array.isArray(parsed.missions)) {
-    setLog('Invalid format: expected a missions.json file with { "version": "...", "missions": [...] }');
+  const missions = Array.isArray(parsed) ? parsed : parsed.missions;
+  if (!Array.isArray(missions)) {
+    setLog('Invalid format: expected a missions.json file with { "version": "...", "missions": [...] } or a plain array.');
     this.value = '';
     return;
   }
-  const missions = parsed.missions;
   if (missions.length === 0) { setLog('No missions found in file.'); this.value = ''; return; }
 
   const res = await fetch('/api/load-and-clean-final-format', {

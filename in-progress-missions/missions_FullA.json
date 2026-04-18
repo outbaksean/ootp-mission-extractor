@@ -1,0 +1,8299 @@
+{
+  "version": "2026-03-13",
+  "missions": [
+    {
+      "id": 1,
+      "name": "Live Level 1 - Arizona Diamondbacks",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Chase Field",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81843
+        },
+        {
+          "cardId": 81841
+        },
+        {
+          "cardId": 81845
+        },
+        {
+          "cardId": 81837
+        },
+        {
+          "cardId": 81850
+        },
+        {
+          "cardId": 81834
+        },
+        {
+          "cardId": 81840
+        },
+        {
+          "cardId": 81847
+        },
+        {
+          "cardId": 81839
+        },
+        {
+          "cardId": 81848
+        },
+        {
+          "cardId": 81844
+        },
+        {
+          "cardId": 81842
+        },
+        {
+          "cardId": 81838
+        },
+        {
+          "cardId": 81849
+        },
+        {
+          "cardId": 81836
+        },
+        {
+          "cardId": 81853
+        },
+        {
+          "cardId": 81832
+        },
+        {
+          "cardId": 81855
+        },
+        {
+          "cardId": 81833
+        },
+        {
+          "cardId": 81835
+        },
+        {
+          "cardId": 81857
+        },
+        {
+          "cardId": 81854
+        },
+        {
+          "cardId": 81856
+        },
+        {
+          "cardId": 81851
+        },
+        {
+          "cardId": 81852
+        },
+        {
+          "cardId": 81858
+        },
+        {
+          "cardId": 81861
+        },
+        {
+          "cardId": 81860
+        },
+        {
+          "cardId": 81859
+        },
+        {
+          "cardId": 81862
+        },
+        {
+          "cardId": 81846
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Chase Field"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Live Level 2 - Arizona Diamondbacks",
+      "type": "count",
+      "requiredCount": 30,
+      "reward": "Live Collection Reward - Historical All-Star SP Dan Haren ARI 2009, 2x Silver Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81843
+        },
+        {
+          "cardId": 81841
+        },
+        {
+          "cardId": 81845
+        },
+        {
+          "cardId": 81837
+        },
+        {
+          "cardId": 81850
+        },
+        {
+          "cardId": 81834
+        },
+        {
+          "cardId": 81840
+        },
+        {
+          "cardId": 81847
+        },
+        {
+          "cardId": 81839
+        },
+        {
+          "cardId": 81848
+        },
+        {
+          "cardId": 81844
+        },
+        {
+          "cardId": 81842
+        },
+        {
+          "cardId": 81838
+        },
+        {
+          "cardId": 81849
+        },
+        {
+          "cardId": 81836
+        },
+        {
+          "cardId": 81853
+        },
+        {
+          "cardId": 81832
+        },
+        {
+          "cardId": 81855
+        },
+        {
+          "cardId": 81833
+        },
+        {
+          "cardId": 81835
+        },
+        {
+          "cardId": 81857
+        },
+        {
+          "cardId": 81854
+        },
+        {
+          "cardId": 81856
+        },
+        {
+          "cardId": 81851
+        },
+        {
+          "cardId": 81852
+        },
+        {
+          "cardId": 81858
+        },
+        {
+          "cardId": 81861
+        },
+        {
+          "cardId": 81860
+        },
+        {
+          "cardId": 81859
+        },
+        {
+          "cardId": 81862
+        },
+        {
+          "cardId": 81846
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84080
+        },
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Live Level 1 - Athletics",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Standard Pack, Park: Sutter Health Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82271
+        },
+        {
+          "cardId": 82272
+        },
+        {
+          "cardId": 82263
+        },
+        {
+          "cardId": 82267
+        },
+        {
+          "cardId": 82256
+        },
+        {
+          "cardId": 82264
+        },
+        {
+          "cardId": 82269
+        },
+        {
+          "cardId": 82273
+        },
+        {
+          "cardId": 82268
+        },
+        {
+          "cardId": 82266
+        },
+        {
+          "cardId": 82274
+        },
+        {
+          "cardId": 82257
+        },
+        {
+          "cardId": 82265
+        },
+        {
+          "cardId": 82278
+        },
+        {
+          "cardId": 82261
+        },
+        {
+          "cardId": 82281
+        },
+        {
+          "cardId": 82260
+        },
+        {
+          "cardId": 82280
+        },
+        {
+          "cardId": 82282
+        },
+        {
+          "cardId": 82255
+        },
+        {
+          "cardId": 82279
+        },
+        {
+          "cardId": 82259
+        },
+        {
+          "cardId": 82285
+        },
+        {
+          "cardId": 82262
+        },
+        {
+          "cardId": 82276
+        },
+        {
+          "cardId": 82283
+        },
+        {
+          "cardId": 82284
+        },
+        {
+          "cardId": 82286
+        },
+        {
+          "cardId": 82277
+        },
+        {
+          "cardId": 82287
+        },
+        {
+          "cardId": 82275
+        },
+        {
+          "cardId": 82258
+        },
+        {
+          "cardId": 82270
+        }
+      ],
+      "totalPoints": 33,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "Sutter Health Park"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Live Level 2 - Athletics",
+      "type": "count",
+      "requiredCount": 32,
+      "reward": "Live Collection Reward - Super Utility 2B Lance Blankenship ATH 1992, 2x Standard Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82271
+        },
+        {
+          "cardId": 82272
+        },
+        {
+          "cardId": 82263
+        },
+        {
+          "cardId": 82267
+        },
+        {
+          "cardId": 82256
+        },
+        {
+          "cardId": 82264
+        },
+        {
+          "cardId": 82269
+        },
+        {
+          "cardId": 82273
+        },
+        {
+          "cardId": 82268
+        },
+        {
+          "cardId": 82266
+        },
+        {
+          "cardId": 82274
+        },
+        {
+          "cardId": 82257
+        },
+        {
+          "cardId": 82265
+        },
+        {
+          "cardId": 82278
+        },
+        {
+          "cardId": 82261
+        },
+        {
+          "cardId": 82281
+        },
+        {
+          "cardId": 82260
+        },
+        {
+          "cardId": 82280
+        },
+        {
+          "cardId": 82282
+        },
+        {
+          "cardId": 82255
+        },
+        {
+          "cardId": 82279
+        },
+        {
+          "cardId": 82259
+        },
+        {
+          "cardId": 82285
+        },
+        {
+          "cardId": 82262
+        },
+        {
+          "cardId": 82276
+        },
+        {
+          "cardId": 82283
+        },
+        {
+          "cardId": 82284
+        },
+        {
+          "cardId": 82286
+        },
+        {
+          "cardId": 82277
+        },
+        {
+          "cardId": 82287
+        },
+        {
+          "cardId": 82275
+        },
+        {
+          "cardId": 82258
+        },
+        {
+          "cardId": 82270
+        }
+      ],
+      "totalPoints": 33,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83827
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Live Level 1 - Atlanta Braves",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Truist Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82138
+        },
+        {
+          "cardId": 82147
+        },
+        {
+          "cardId": 82140
+        },
+        {
+          "cardId": 82149
+        },
+        {
+          "cardId": 82133
+        },
+        {
+          "cardId": 82145
+        },
+        {
+          "cardId": 82143
+        },
+        {
+          "cardId": 82146
+        },
+        {
+          "cardId": 82157
+        },
+        {
+          "cardId": 82156
+        },
+        {
+          "cardId": 82144
+        },
+        {
+          "cardId": 82132
+        },
+        {
+          "cardId": 82139
+        },
+        {
+          "cardId": 82141
+        },
+        {
+          "cardId": 82148
+        },
+        {
+          "cardId": 82153
+        },
+        {
+          "cardId": 82134
+        },
+        {
+          "cardId": 82136
+        },
+        {
+          "cardId": 82154
+        },
+        {
+          "cardId": 82152
+        },
+        {
+          "cardId": 82151
+        },
+        {
+          "cardId": 82160
+        },
+        {
+          "cardId": 82131
+        },
+        {
+          "cardId": 82155
+        },
+        {
+          "cardId": 82135
+        },
+        {
+          "cardId": 82162
+        },
+        {
+          "cardId": 82158
+        },
+        {
+          "cardId": 82159
+        },
+        {
+          "cardId": 82150
+        },
+        {
+          "cardId": 82130
+        },
+        {
+          "cardId": 82161
+        },
+        {
+          "cardId": 82137
+        },
+        {
+          "cardId": 82142
+        }
+      ],
+      "totalPoints": 33,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Truist Park"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Live Level 2 - Atlanta Braves",
+      "type": "count",
+      "requiredCount": 31,
+      "reward": "Live Collection Reward - Hardware Heroes SS Herman Long BSN 1900, 2x Silver Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82138
+        },
+        {
+          "cardId": 82147
+        },
+        {
+          "cardId": 82140
+        },
+        {
+          "cardId": 82149
+        },
+        {
+          "cardId": 82133
+        },
+        {
+          "cardId": 82145
+        },
+        {
+          "cardId": 82143
+        },
+        {
+          "cardId": 82146
+        },
+        {
+          "cardId": 82157
+        },
+        {
+          "cardId": 82156
+        },
+        {
+          "cardId": 82144
+        },
+        {
+          "cardId": 82132
+        },
+        {
+          "cardId": 82139
+        },
+        {
+          "cardId": 82141
+        },
+        {
+          "cardId": 82148
+        },
+        {
+          "cardId": 82153
+        },
+        {
+          "cardId": 82134
+        },
+        {
+          "cardId": 82136
+        },
+        {
+          "cardId": 82154
+        },
+        {
+          "cardId": 82152
+        },
+        {
+          "cardId": 82151
+        },
+        {
+          "cardId": 82160
+        },
+        {
+          "cardId": 82131
+        },
+        {
+          "cardId": 82155
+        },
+        {
+          "cardId": 82135
+        },
+        {
+          "cardId": 82162
+        },
+        {
+          "cardId": 82158
+        },
+        {
+          "cardId": 82159
+        },
+        {
+          "cardId": 82150
+        },
+        {
+          "cardId": 82130
+        },
+        {
+          "cardId": 82161
+        },
+        {
+          "cardId": 82137
+        },
+        {
+          "cardId": 82142
+        }
+      ],
+      "totalPoints": 33,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 82741
+        },
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Live Level 1 - Baltimore Orioles",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Oriole Park at Camden Yards",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82637
+        },
+        {
+          "cardId": 82644
+        },
+        {
+          "cardId": 82634
+        },
+        {
+          "cardId": 82623
+        },
+        {
+          "cardId": 82627
+        },
+        {
+          "cardId": 82631
+        },
+        {
+          "cardId": 82636
+        },
+        {
+          "cardId": 82641
+        },
+        {
+          "cardId": 82640
+        },
+        {
+          "cardId": 82633
+        },
+        {
+          "cardId": 82639
+        },
+        {
+          "cardId": 82652
+        },
+        {
+          "cardId": 82638
+        },
+        {
+          "cardId": 82632
+        },
+        {
+          "cardId": 82635
+        },
+        {
+          "cardId": 82624
+        },
+        {
+          "cardId": 82626
+        },
+        {
+          "cardId": 82625
+        },
+        {
+          "cardId": 82643
+        },
+        {
+          "cardId": 82651
+        },
+        {
+          "cardId": 82628
+        },
+        {
+          "cardId": 82645
+        },
+        {
+          "cardId": 82649
+        },
+        {
+          "cardId": 82647
+        },
+        {
+          "cardId": 82629
+        },
+        {
+          "cardId": 82630
+        },
+        {
+          "cardId": 82656
+        },
+        {
+          "cardId": 82653
+        },
+        {
+          "cardId": 82646
+        },
+        {
+          "cardId": 84391
+        },
+        {
+          "cardId": 82650
+        },
+        {
+          "cardId": 82654
+        },
+        {
+          "cardId": 82648
+        },
+        {
+          "cardId": 82655
+        },
+        {
+          "cardId": 82642
+        }
+      ],
+      "totalPoints": 35,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Oriole Park at Camden Yards"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Live Level 2 - Baltimore Orioles",
+      "type": "count",
+      "requiredCount": 33,
+      "reward": "Live Collection Reward - All-Time Legend C Chris Hoiles BAL Peak, Silver Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82637
+        },
+        {
+          "cardId": 82644
+        },
+        {
+          "cardId": 82634
+        },
+        {
+          "cardId": 82623
+        },
+        {
+          "cardId": 82627
+        },
+        {
+          "cardId": 82631
+        },
+        {
+          "cardId": 82636
+        },
+        {
+          "cardId": 82641
+        },
+        {
+          "cardId": 82640
+        },
+        {
+          "cardId": 82633
+        },
+        {
+          "cardId": 82639
+        },
+        {
+          "cardId": 82652
+        },
+        {
+          "cardId": 82638
+        },
+        {
+          "cardId": 82632
+        },
+        {
+          "cardId": 82635
+        },
+        {
+          "cardId": 82624
+        },
+        {
+          "cardId": 82626
+        },
+        {
+          "cardId": 82625
+        },
+        {
+          "cardId": 82643
+        },
+        {
+          "cardId": 82651
+        },
+        {
+          "cardId": 82628
+        },
+        {
+          "cardId": 82645
+        },
+        {
+          "cardId": 82649
+        },
+        {
+          "cardId": 82647
+        },
+        {
+          "cardId": 82629
+        },
+        {
+          "cardId": 82630
+        },
+        {
+          "cardId": 82656
+        },
+        {
+          "cardId": 82653
+        },
+        {
+          "cardId": 82646
+        },
+        {
+          "cardId": 84391
+        },
+        {
+          "cardId": 82650
+        },
+        {
+          "cardId": 82654
+        },
+        {
+          "cardId": 82648
+        },
+        {
+          "cardId": 82655
+        },
+        {
+          "cardId": 82642
+        }
+      ],
+      "totalPoints": 35,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84200
+        },
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Live Level 1 - Boston Red Sox",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Fenway Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82599
+        },
+        {
+          "cardId": 82598
+        },
+        {
+          "cardId": 82605
+        },
+        {
+          "cardId": 82611
+        },
+        {
+          "cardId": 82600
+        },
+        {
+          "cardId": 82591
+        },
+        {
+          "cardId": 82603
+        },
+        {
+          "cardId": 82588
+        },
+        {
+          "cardId": 82606
+        },
+        {
+          "cardId": 82594
+        },
+        {
+          "cardId": 82589
+        },
+        {
+          "cardId": 82593
+        },
+        {
+          "cardId": 82608
+        },
+        {
+          "cardId": 82617
+        },
+        {
+          "cardId": 82601
+        },
+        {
+          "cardId": 82609
+        },
+        {
+          "cardId": 82590
+        },
+        {
+          "cardId": 82602
+        },
+        {
+          "cardId": 82607
+        },
+        {
+          "cardId": 82616
+        },
+        {
+          "cardId": 82596
+        },
+        {
+          "cardId": 82597
+        },
+        {
+          "cardId": 82614
+        },
+        {
+          "cardId": 82615
+        },
+        {
+          "cardId": 82595
+        },
+        {
+          "cardId": 82619
+        },
+        {
+          "cardId": 82613
+        },
+        {
+          "cardId": 82622
+        },
+        {
+          "cardId": 82618
+        },
+        {
+          "cardId": 82612
+        },
+        {
+          "cardId": 82620
+        },
+        {
+          "cardId": 82621
+        },
+        {
+          "cardId": 82592
+        },
+        {
+          "cardId": 82604
+        },
+        {
+          "cardId": 82610
+        }
+      ],
+      "totalPoints": 35,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Fenway Park"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Live Level 2 - Boston Red Sox",
+      "type": "count",
+      "requiredCount": 33,
+      "reward": "Live Collection Reward - Historical All-Star 1B Kevin Youkilis BOS 2009, 2x Silver Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82599
+        },
+        {
+          "cardId": 82598
+        },
+        {
+          "cardId": 82605
+        },
+        {
+          "cardId": 82611
+        },
+        {
+          "cardId": 82600
+        },
+        {
+          "cardId": 82591
+        },
+        {
+          "cardId": 82603
+        },
+        {
+          "cardId": 82588
+        },
+        {
+          "cardId": 82606
+        },
+        {
+          "cardId": 82594
+        },
+        {
+          "cardId": 82589
+        },
+        {
+          "cardId": 82593
+        },
+        {
+          "cardId": 82608
+        },
+        {
+          "cardId": 82617
+        },
+        {
+          "cardId": 82601
+        },
+        {
+          "cardId": 82609
+        },
+        {
+          "cardId": 82590
+        },
+        {
+          "cardId": 82602
+        },
+        {
+          "cardId": 82607
+        },
+        {
+          "cardId": 82616
+        },
+        {
+          "cardId": 82596
+        },
+        {
+          "cardId": 82597
+        },
+        {
+          "cardId": 82614
+        },
+        {
+          "cardId": 82615
+        },
+        {
+          "cardId": 82595
+        },
+        {
+          "cardId": 82619
+        },
+        {
+          "cardId": 82613
+        },
+        {
+          "cardId": 82622
+        },
+        {
+          "cardId": 82618
+        },
+        {
+          "cardId": 82612
+        },
+        {
+          "cardId": 82620
+        },
+        {
+          "cardId": 82621
+        },
+        {
+          "cardId": 82592
+        },
+        {
+          "cardId": 82604
+        },
+        {
+          "cardId": 82610
+        }
+      ],
+      "totalPoints": 35,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84197
+        },
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Live Level 1 - Chicago Cubs",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Silver Pack, Park: Wrigley Field",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81988
+        },
+        {
+          "cardId": 81989
+        },
+        {
+          "cardId": 81984
+        },
+        {
+          "cardId": 81993
+        },
+        {
+          "cardId": 81983
+        },
+        {
+          "cardId": 81987
+        },
+        {
+          "cardId": 81986
+        },
+        {
+          "cardId": 81981
+        },
+        {
+          "cardId": 81990
+        },
+        {
+          "cardId": 81998
+        },
+        {
+          "cardId": 81980
+        },
+        {
+          "cardId": 81991
+        },
+        {
+          "cardId": 81985
+        },
+        {
+          "cardId": 81992
+        },
+        {
+          "cardId": 82000
+        },
+        {
+          "cardId": 82002
+        },
+        {
+          "cardId": 81999
+        },
+        {
+          "cardId": 82001
+        },
+        {
+          "cardId": 81997
+        },
+        {
+          "cardId": 81982
+        },
+        {
+          "cardId": 82003
+        },
+        {
+          "cardId": 81995
+        },
+        {
+          "cardId": 81996
+        },
+        {
+          "cardId": 82004
+        },
+        {
+          "cardId": 82006
+        },
+        {
+          "cardId": 82007
+        },
+        {
+          "cardId": 82005
+        },
+        {
+          "cardId": 81994
+        }
+      ],
+      "totalPoints": 28,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "Wrigley Field"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Live Level 2 - Chicago Cubs",
+      "type": "count",
+      "requiredCount": 27,
+      "reward": "Live Collection Reward - Snapshot CF Jimmy Ryan CHC 1888, 2x Gold Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81988
+        },
+        {
+          "cardId": 81989
+        },
+        {
+          "cardId": 81984
+        },
+        {
+          "cardId": 81993
+        },
+        {
+          "cardId": 81983
+        },
+        {
+          "cardId": 81987
+        },
+        {
+          "cardId": 81986
+        },
+        {
+          "cardId": 81981
+        },
+        {
+          "cardId": 81990
+        },
+        {
+          "cardId": 81998
+        },
+        {
+          "cardId": 81980
+        },
+        {
+          "cardId": 81991
+        },
+        {
+          "cardId": 81985
+        },
+        {
+          "cardId": 81992
+        },
+        {
+          "cardId": 82000
+        },
+        {
+          "cardId": 82002
+        },
+        {
+          "cardId": 81999
+        },
+        {
+          "cardId": 82001
+        },
+        {
+          "cardId": 81997
+        },
+        {
+          "cardId": 81982
+        },
+        {
+          "cardId": 82003
+        },
+        {
+          "cardId": 81995
+        },
+        {
+          "cardId": 81996
+        },
+        {
+          "cardId": 82004
+        },
+        {
+          "cardId": 82006
+        },
+        {
+          "cardId": 82007
+        },
+        {
+          "cardId": 82005
+        },
+        {
+          "cardId": 81994
+        }
+      ],
+      "totalPoints": 28,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83841
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Live Level 1 - Cincinnati Reds",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Great American Ball Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81957
+        },
+        {
+          "cardId": 81950
+        },
+        {
+          "cardId": 81962
+        },
+        {
+          "cardId": 81959
+        },
+        {
+          "cardId": 81958
+        },
+        {
+          "cardId": 81966
+        },
+        {
+          "cardId": 81956
+        },
+        {
+          "cardId": 81963
+        },
+        {
+          "cardId": 81964
+        },
+        {
+          "cardId": 81949
+        },
+        {
+          "cardId": 81955
+        },
+        {
+          "cardId": 81961
+        },
+        {
+          "cardId": 81974
+        },
+        {
+          "cardId": 81953
+        },
+        {
+          "cardId": 81954
+        },
+        {
+          "cardId": 81951
+        },
+        {
+          "cardId": 81960
+        },
+        {
+          "cardId": 81969
+        },
+        {
+          "cardId": 81971
+        },
+        {
+          "cardId": 81967
+        },
+        {
+          "cardId": 81977
+        },
+        {
+          "cardId": 81952
+        },
+        {
+          "cardId": 81972
+        },
+        {
+          "cardId": 81968
+        },
+        {
+          "cardId": 81970
+        },
+        {
+          "cardId": 81973
+        },
+        {
+          "cardId": 81976
+        },
+        {
+          "cardId": 81975
+        },
+        {
+          "cardId": 81979
+        },
+        {
+          "cardId": 81978
+        },
+        {
+          "cardId": 81965
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Great American Ball Park"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Live Level 2 - Cincinnati Reds",
+      "type": "count",
+      "requiredCount": 30,
+      "reward": "Live Collection Reward - Snapshot 2B Lonny Frey CIN 1940, 2x Gold Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81957
+        },
+        {
+          "cardId": 81950
+        },
+        {
+          "cardId": 81962
+        },
+        {
+          "cardId": 81959
+        },
+        {
+          "cardId": 81958
+        },
+        {
+          "cardId": 81966
+        },
+        {
+          "cardId": 81956
+        },
+        {
+          "cardId": 81963
+        },
+        {
+          "cardId": 81964
+        },
+        {
+          "cardId": 81949
+        },
+        {
+          "cardId": 81955
+        },
+        {
+          "cardId": 81961
+        },
+        {
+          "cardId": 81974
+        },
+        {
+          "cardId": 81953
+        },
+        {
+          "cardId": 81954
+        },
+        {
+          "cardId": 81951
+        },
+        {
+          "cardId": 81960
+        },
+        {
+          "cardId": 81969
+        },
+        {
+          "cardId": 81971
+        },
+        {
+          "cardId": 81967
+        },
+        {
+          "cardId": 81977
+        },
+        {
+          "cardId": 81952
+        },
+        {
+          "cardId": 81972
+        },
+        {
+          "cardId": 81968
+        },
+        {
+          "cardId": 81970
+        },
+        {
+          "cardId": 81973
+        },
+        {
+          "cardId": 81976
+        },
+        {
+          "cardId": 81975
+        },
+        {
+          "cardId": 81979
+        },
+        {
+          "cardId": 81978
+        },
+        {
+          "cardId": 81965
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83971
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Live Level 1 - Cleveland Guardians",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Progressive Field",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82435
+        },
+        {
+          "cardId": 82441
+        },
+        {
+          "cardId": 82437
+        },
+        {
+          "cardId": 82444
+        },
+        {
+          "cardId": 82443
+        },
+        {
+          "cardId": 82439
+        },
+        {
+          "cardId": 82428
+        },
+        {
+          "cardId": 82450
+        },
+        {
+          "cardId": 82426
+        },
+        {
+          "cardId": 82442
+        },
+        {
+          "cardId": 82427
+        },
+        {
+          "cardId": 82434
+        },
+        {
+          "cardId": 82440
+        },
+        {
+          "cardId": 82438
+        },
+        {
+          "cardId": 82445
+        },
+        {
+          "cardId": 82452
+        },
+        {
+          "cardId": 82430
+        },
+        {
+          "cardId": 82429
+        },
+        {
+          "cardId": 82448
+        },
+        {
+          "cardId": 82446
+        },
+        {
+          "cardId": 82425
+        },
+        {
+          "cardId": 82449
+        },
+        {
+          "cardId": 82447
+        },
+        {
+          "cardId": 82454
+        },
+        {
+          "cardId": 82453
+        },
+        {
+          "cardId": 82431
+        },
+        {
+          "cardId": 82451
+        },
+        {
+          "cardId": 82432
+        },
+        {
+          "cardId": 82455
+        },
+        {
+          "cardId": 82433
+        },
+        {
+          "cardId": 82436
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Progressive Field"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Live Level 2 - Cleveland Guardians",
+      "type": "count",
+      "requiredCount": 29,
+      "reward": "Live Collection Reward - Snapshot C Frankie Pytlak CLE 1937, 2x Standard Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82435
+        },
+        {
+          "cardId": 82441
+        },
+        {
+          "cardId": 82437
+        },
+        {
+          "cardId": 82444
+        },
+        {
+          "cardId": 82443
+        },
+        {
+          "cardId": 82439
+        },
+        {
+          "cardId": 82428
+        },
+        {
+          "cardId": 82450
+        },
+        {
+          "cardId": 82426
+        },
+        {
+          "cardId": 82442
+        },
+        {
+          "cardId": 82427
+        },
+        {
+          "cardId": 82434
+        },
+        {
+          "cardId": 82440
+        },
+        {
+          "cardId": 82438
+        },
+        {
+          "cardId": 82445
+        },
+        {
+          "cardId": 82452
+        },
+        {
+          "cardId": 82430
+        },
+        {
+          "cardId": 82429
+        },
+        {
+          "cardId": 82448
+        },
+        {
+          "cardId": 82446
+        },
+        {
+          "cardId": 82425
+        },
+        {
+          "cardId": 82449
+        },
+        {
+          "cardId": 82447
+        },
+        {
+          "cardId": 82454
+        },
+        {
+          "cardId": 82453
+        },
+        {
+          "cardId": 82431
+        },
+        {
+          "cardId": 82451
+        },
+        {
+          "cardId": 82432
+        },
+        {
+          "cardId": 82455
+        },
+        {
+          "cardId": 82433
+        },
+        {
+          "cardId": 82436
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83811
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Live Level 1 - Colorado Rockies",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Standard Pack, Park: Coors Field",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81812
+        },
+        {
+          "cardId": 81811
+        },
+        {
+          "cardId": 81800
+        },
+        {
+          "cardId": 81801
+        },
+        {
+          "cardId": 81813
+        },
+        {
+          "cardId": 81815
+        },
+        {
+          "cardId": 81816
+        },
+        {
+          "cardId": 81819
+        },
+        {
+          "cardId": 81810
+        },
+        {
+          "cardId": 81803
+        },
+        {
+          "cardId": 81824
+        },
+        {
+          "cardId": 81809
+        },
+        {
+          "cardId": 81814
+        },
+        {
+          "cardId": 81818
+        },
+        {
+          "cardId": 81808
+        },
+        {
+          "cardId": 81821
+        },
+        {
+          "cardId": 81804
+        },
+        {
+          "cardId": 81825
+        },
+        {
+          "cardId": 81799
+        },
+        {
+          "cardId": 81806
+        },
+        {
+          "cardId": 81823
+        },
+        {
+          "cardId": 81802
+        },
+        {
+          "cardId": 81826
+        },
+        {
+          "cardId": 81805
+        },
+        {
+          "cardId": 81829
+        },
+        {
+          "cardId": 81822
+        },
+        {
+          "cardId": 81831
+        },
+        {
+          "cardId": 81830
+        },
+        {
+          "cardId": 81827
+        },
+        {
+          "cardId": 81807
+        },
+        {
+          "cardId": 81828
+        },
+        {
+          "cardId": 81820
+        },
+        {
+          "cardId": 81817
+        }
+      ],
+      "totalPoints": 33,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "Coors Field"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Live Level 2 - Colorado Rockies",
+      "type": "count",
+      "requiredCount": 33,
+      "reward": "Live Collection Reward - Rookie Sensation SS Juan Uribe COL 2001, Standard Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81812
+        },
+        {
+          "cardId": 81811
+        },
+        {
+          "cardId": 81800
+        },
+        {
+          "cardId": 81801
+        },
+        {
+          "cardId": 81813
+        },
+        {
+          "cardId": 81815
+        },
+        {
+          "cardId": 81816
+        },
+        {
+          "cardId": 81819
+        },
+        {
+          "cardId": 81810
+        },
+        {
+          "cardId": 81803
+        },
+        {
+          "cardId": 81824
+        },
+        {
+          "cardId": 81809
+        },
+        {
+          "cardId": 81814
+        },
+        {
+          "cardId": 81818
+        },
+        {
+          "cardId": 81808
+        },
+        {
+          "cardId": 81821
+        },
+        {
+          "cardId": 81804
+        },
+        {
+          "cardId": 81825
+        },
+        {
+          "cardId": 81799
+        },
+        {
+          "cardId": 81806
+        },
+        {
+          "cardId": 81823
+        },
+        {
+          "cardId": 81802
+        },
+        {
+          "cardId": 81826
+        },
+        {
+          "cardId": 81805
+        },
+        {
+          "cardId": 81829
+        },
+        {
+          "cardId": 81822
+        },
+        {
+          "cardId": 81831
+        },
+        {
+          "cardId": 81830
+        },
+        {
+          "cardId": 81827
+        },
+        {
+          "cardId": 81807
+        },
+        {
+          "cardId": 81828
+        },
+        {
+          "cardId": 81820
+        },
+        {
+          "cardId": 81817
+        }
+      ],
+      "totalPoints": 33,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84334
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Live Level 1 - Chicago White Sox",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Standard Pack, Park: Rate Field",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82458
+        },
+        {
+          "cardId": 82467
+        },
+        {
+          "cardId": 82457
+        },
+        {
+          "cardId": 82469
+        },
+        {
+          "cardId": 82459
+        },
+        {
+          "cardId": 82471
+        },
+        {
+          "cardId": 82461
+        },
+        {
+          "cardId": 82476
+        },
+        {
+          "cardId": 82475
+        },
+        {
+          "cardId": 82472
+        },
+        {
+          "cardId": 82477
+        },
+        {
+          "cardId": 82470
+        },
+        {
+          "cardId": 82474
+        },
+        {
+          "cardId": 82468
+        },
+        {
+          "cardId": 82456
+        },
+        {
+          "cardId": 82463
+        },
+        {
+          "cardId": 82464
+        },
+        {
+          "cardId": 82487
+        },
+        {
+          "cardId": 82486
+        },
+        {
+          "cardId": 82478
+        },
+        {
+          "cardId": 82482
+        },
+        {
+          "cardId": 82479
+        },
+        {
+          "cardId": 82485
+        },
+        {
+          "cardId": 82483
+        },
+        {
+          "cardId": 82462
+        },
+        {
+          "cardId": 82465
+        },
+        {
+          "cardId": 82481
+        },
+        {
+          "cardId": 82466
+        },
+        {
+          "cardId": 82480
+        },
+        {
+          "cardId": 82484
+        },
+        {
+          "cardId": 82460
+        },
+        {
+          "cardId": 82473
+        }
+      ],
+      "totalPoints": 32,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "Rate Field"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Live Level 2 - Chicago White Sox",
+      "type": "count",
+      "requiredCount": 31,
+      "reward": "Live Collection Reward - Rookie Sensation RP Chris Sale CWS 2010, Standard Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82458
+        },
+        {
+          "cardId": 82467
+        },
+        {
+          "cardId": 82457
+        },
+        {
+          "cardId": 82469
+        },
+        {
+          "cardId": 82459
+        },
+        {
+          "cardId": 82471
+        },
+        {
+          "cardId": 82461
+        },
+        {
+          "cardId": 82476
+        },
+        {
+          "cardId": 82475
+        },
+        {
+          "cardId": 82472
+        },
+        {
+          "cardId": 82477
+        },
+        {
+          "cardId": 82470
+        },
+        {
+          "cardId": 82474
+        },
+        {
+          "cardId": 82468
+        },
+        {
+          "cardId": 82456
+        },
+        {
+          "cardId": 82463
+        },
+        {
+          "cardId": 82464
+        },
+        {
+          "cardId": 82487
+        },
+        {
+          "cardId": 82486
+        },
+        {
+          "cardId": 82478
+        },
+        {
+          "cardId": 82482
+        },
+        {
+          "cardId": 82479
+        },
+        {
+          "cardId": 82485
+        },
+        {
+          "cardId": 82483
+        },
+        {
+          "cardId": 82462
+        },
+        {
+          "cardId": 82465
+        },
+        {
+          "cardId": 82481
+        },
+        {
+          "cardId": 82466
+        },
+        {
+          "cardId": 82480
+        },
+        {
+          "cardId": 82484
+        },
+        {
+          "cardId": 82460
+        },
+        {
+          "cardId": 82473
+        }
+      ],
+      "totalPoints": 32,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83244
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Live Level 1 - Detroit Tigers",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Comerica Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82405
+        },
+        {
+          "cardId": 82411
+        },
+        {
+          "cardId": 82402
+        },
+        {
+          "cardId": 82401
+        },
+        {
+          "cardId": 82406
+        },
+        {
+          "cardId": 82407
+        },
+        {
+          "cardId": 82400
+        },
+        {
+          "cardId": 82404
+        },
+        {
+          "cardId": 82399
+        },
+        {
+          "cardId": 82419
+        },
+        {
+          "cardId": 82417
+        },
+        {
+          "cardId": 82418
+        },
+        {
+          "cardId": 82409
+        },
+        {
+          "cardId": 82403
+        },
+        {
+          "cardId": 82408
+        },
+        {
+          "cardId": 82393
+        },
+        {
+          "cardId": 82413
+        },
+        {
+          "cardId": 82414
+        },
+        {
+          "cardId": 82395
+        },
+        {
+          "cardId": 82412
+        },
+        {
+          "cardId": 82396
+        },
+        {
+          "cardId": 82415
+        },
+        {
+          "cardId": 82416
+        },
+        {
+          "cardId": 82420
+        },
+        {
+          "cardId": 82423
+        },
+        {
+          "cardId": 82422
+        },
+        {
+          "cardId": 82421
+        },
+        {
+          "cardId": 82397
+        },
+        {
+          "cardId": 82424
+        },
+        {
+          "cardId": 82398
+        },
+        {
+          "cardId": 82410
+        },
+        {
+          "cardId": 82394
+        }
+      ],
+      "totalPoints": 32,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Comerica Park"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Live Level 2 - Detroit Tigers",
+      "type": "count",
+      "requiredCount": 31,
+      "reward": "Live Collection Reward - Super Utility LF Tony Phillips DET 1993, Silver Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82405
+        },
+        {
+          "cardId": 82411
+        },
+        {
+          "cardId": 82402
+        },
+        {
+          "cardId": 82401
+        },
+        {
+          "cardId": 82406
+        },
+        {
+          "cardId": 82407
+        },
+        {
+          "cardId": 82400
+        },
+        {
+          "cardId": 82404
+        },
+        {
+          "cardId": 82399
+        },
+        {
+          "cardId": 82419
+        },
+        {
+          "cardId": 82417
+        },
+        {
+          "cardId": 82418
+        },
+        {
+          "cardId": 82409
+        },
+        {
+          "cardId": 82403
+        },
+        {
+          "cardId": 82408
+        },
+        {
+          "cardId": 82393
+        },
+        {
+          "cardId": 82413
+        },
+        {
+          "cardId": 82414
+        },
+        {
+          "cardId": 82395
+        },
+        {
+          "cardId": 82412
+        },
+        {
+          "cardId": 82396
+        },
+        {
+          "cardId": 82415
+        },
+        {
+          "cardId": 82416
+        },
+        {
+          "cardId": 82420
+        },
+        {
+          "cardId": 82423
+        },
+        {
+          "cardId": 82422
+        },
+        {
+          "cardId": 82421
+        },
+        {
+          "cardId": 82397
+        },
+        {
+          "cardId": 82424
+        },
+        {
+          "cardId": 82398
+        },
+        {
+          "cardId": 82410
+        },
+        {
+          "cardId": 82394
+        }
+      ],
+      "totalPoints": 32,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83845
+        },
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Live Level 1 - Houston Astros",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Daikin Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82176
+        },
+        {
+          "cardId": 82179
+        },
+        {
+          "cardId": 82175
+        },
+        {
+          "cardId": 82172
+        },
+        {
+          "cardId": 82174
+        },
+        {
+          "cardId": 82173
+        },
+        {
+          "cardId": 82171
+        },
+        {
+          "cardId": 82187
+        },
+        {
+          "cardId": 82165
+        },
+        {
+          "cardId": 82178
+        },
+        {
+          "cardId": 82168
+        },
+        {
+          "cardId": 82166
+        },
+        {
+          "cardId": 82164
+        },
+        {
+          "cardId": 82184
+        },
+        {
+          "cardId": 82186
+        },
+        {
+          "cardId": 82182
+        },
+        {
+          "cardId": 82183
+        },
+        {
+          "cardId": 82180
+        },
+        {
+          "cardId": 82185
+        },
+        {
+          "cardId": 82167
+        },
+        {
+          "cardId": 82190
+        },
+        {
+          "cardId": 82189
+        },
+        {
+          "cardId": 82163
+        },
+        {
+          "cardId": 82188
+        },
+        {
+          "cardId": 82181
+        },
+        {
+          "cardId": 82177
+        },
+        {
+          "cardId": 82170
+        },
+        {
+          "cardId": 82169
+        }
+      ],
+      "totalPoints": 28,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Daikin Park"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Live Level 2 - Houston Astros",
+      "type": "count",
+      "requiredCount": 27,
+      "reward": "Live Collection Reward - Historical All-Star SS Carlos Correa HOU 2021, 2x Silver Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82176
+        },
+        {
+          "cardId": 82179
+        },
+        {
+          "cardId": 82175
+        },
+        {
+          "cardId": 82172
+        },
+        {
+          "cardId": 82174
+        },
+        {
+          "cardId": 82173
+        },
+        {
+          "cardId": 82171
+        },
+        {
+          "cardId": 82187
+        },
+        {
+          "cardId": 82165
+        },
+        {
+          "cardId": 82178
+        },
+        {
+          "cardId": 82168
+        },
+        {
+          "cardId": 82166
+        },
+        {
+          "cardId": 82164
+        },
+        {
+          "cardId": 82184
+        },
+        {
+          "cardId": 82186
+        },
+        {
+          "cardId": 82182
+        },
+        {
+          "cardId": 82183
+        },
+        {
+          "cardId": 82180
+        },
+        {
+          "cardId": 82185
+        },
+        {
+          "cardId": 82167
+        },
+        {
+          "cardId": 82190
+        },
+        {
+          "cardId": 82189
+        },
+        {
+          "cardId": 82163
+        },
+        {
+          "cardId": 82188
+        },
+        {
+          "cardId": 82181
+        },
+        {
+          "cardId": 82177
+        },
+        {
+          "cardId": 82170
+        },
+        {
+          "cardId": 82169
+        }
+      ],
+      "totalPoints": 28,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84363
+        },
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Live Level 1 - Kansas City Royals",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Standard Pack, Park: Kauffman Stadium",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82361
+        },
+        {
+          "cardId": 82376
+        },
+        {
+          "cardId": 82373
+        },
+        {
+          "cardId": 82367
+        },
+        {
+          "cardId": 82368
+        },
+        {
+          "cardId": 82377
+        },
+        {
+          "cardId": 82374
+        },
+        {
+          "cardId": 82357
+        },
+        {
+          "cardId": 82378
+        },
+        {
+          "cardId": 82358
+        },
+        {
+          "cardId": 82375
+        },
+        {
+          "cardId": 82369
+        },
+        {
+          "cardId": 82363
+        },
+        {
+          "cardId": 82386
+        },
+        {
+          "cardId": 82387
+        },
+        {
+          "cardId": 82372
+        },
+        {
+          "cardId": 82359
+        },
+        {
+          "cardId": 82371
+        },
+        {
+          "cardId": 82362
+        },
+        {
+          "cardId": 82370
+        },
+        {
+          "cardId": 82360
+        },
+        {
+          "cardId": 82380
+        },
+        {
+          "cardId": 82381
+        },
+        {
+          "cardId": 82356
+        },
+        {
+          "cardId": 82385
+        },
+        {
+          "cardId": 82384
+        },
+        {
+          "cardId": 82383
+        },
+        {
+          "cardId": 82364
+        },
+        {
+          "cardId": 82388
+        },
+        {
+          "cardId": 82391
+        },
+        {
+          "cardId": 82389
+        },
+        {
+          "cardId": 82392
+        },
+        {
+          "cardId": 82365
+        },
+        {
+          "cardId": 82382
+        },
+        {
+          "cardId": 82366
+        },
+        {
+          "cardId": 82390
+        },
+        {
+          "cardId": 82379
+        }
+      ],
+      "totalPoints": 37,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "Kauffman Stadium"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Live Level 2 - Kansas City Royals",
+      "type": "count",
+      "requiredCount": 35,
+      "reward": "Live Collection Reward - Historical All-Star CF Lorenzo Cain KC 2015, Standard Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82361
+        },
+        {
+          "cardId": 82376
+        },
+        {
+          "cardId": 82373
+        },
+        {
+          "cardId": 82367
+        },
+        {
+          "cardId": 82368
+        },
+        {
+          "cardId": 82377
+        },
+        {
+          "cardId": 82374
+        },
+        {
+          "cardId": 82357
+        },
+        {
+          "cardId": 82378
+        },
+        {
+          "cardId": 82358
+        },
+        {
+          "cardId": 82375
+        },
+        {
+          "cardId": 82369
+        },
+        {
+          "cardId": 82363
+        },
+        {
+          "cardId": 82386
+        },
+        {
+          "cardId": 82387
+        },
+        {
+          "cardId": 82372
+        },
+        {
+          "cardId": 82359
+        },
+        {
+          "cardId": 82371
+        },
+        {
+          "cardId": 82362
+        },
+        {
+          "cardId": 82370
+        },
+        {
+          "cardId": 82360
+        },
+        {
+          "cardId": 82380
+        },
+        {
+          "cardId": 82381
+        },
+        {
+          "cardId": 82356
+        },
+        {
+          "cardId": 82385
+        },
+        {
+          "cardId": 82384
+        },
+        {
+          "cardId": 82383
+        },
+        {
+          "cardId": 82364
+        },
+        {
+          "cardId": 82388
+        },
+        {
+          "cardId": 82391
+        },
+        {
+          "cardId": 82389
+        },
+        {
+          "cardId": 82392
+        },
+        {
+          "cardId": 82365
+        },
+        {
+          "cardId": 82382
+        },
+        {
+          "cardId": 82366
+        },
+        {
+          "cardId": 82390
+        },
+        {
+          "cardId": 82379
+        }
+      ],
+      "totalPoints": 37,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83962
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Live Level 1 - Los Angeles Angels",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Standard Pack, Park: Angel Stadium of Anaheim",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82299
+        },
+        {
+          "cardId": 82304
+        },
+        {
+          "cardId": 82291
+        },
+        {
+          "cardId": 82302
+        },
+        {
+          "cardId": 82288
+        },
+        {
+          "cardId": 82293
+        },
+        {
+          "cardId": 82308
+        },
+        {
+          "cardId": 82305
+        },
+        {
+          "cardId": 82307
+        },
+        {
+          "cardId": 82290
+        },
+        {
+          "cardId": 82306
+        },
+        {
+          "cardId": 82292
+        },
+        {
+          "cardId": 82298
+        },
+        {
+          "cardId": 82303
+        },
+        {
+          "cardId": 82300
+        },
+        {
+          "cardId": 82301
+        },
+        {
+          "cardId": 82310
+        },
+        {
+          "cardId": 82315
+        },
+        {
+          "cardId": 82311
+        },
+        {
+          "cardId": 82316
+        },
+        {
+          "cardId": 82312
+        },
+        {
+          "cardId": 82314
+        },
+        {
+          "cardId": 82296
+        },
+        {
+          "cardId": 82289
+        },
+        {
+          "cardId": 82313
+        },
+        {
+          "cardId": 82321
+        },
+        {
+          "cardId": 82317
+        },
+        {
+          "cardId": 82295
+        },
+        {
+          "cardId": 82294
+        },
+        {
+          "cardId": 82318
+        },
+        {
+          "cardId": 82319
+        },
+        {
+          "cardId": 82297
+        },
+        {
+          "cardId": 82320
+        },
+        {
+          "cardId": 82322
+        },
+        {
+          "cardId": 82309
+        }
+      ],
+      "totalPoints": 35,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "Angel Stadium of Anaheim"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Live Level 2 - Los Angeles Angels",
+      "type": "count",
+      "requiredCount": 33,
+      "reward": "Live Collection Reward - Historical All-Star 3B Troy Glaus ANA 2003, Standard Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82299
+        },
+        {
+          "cardId": 82304
+        },
+        {
+          "cardId": 82291
+        },
+        {
+          "cardId": 82302
+        },
+        {
+          "cardId": 82288
+        },
+        {
+          "cardId": 82293
+        },
+        {
+          "cardId": 82308
+        },
+        {
+          "cardId": 82305
+        },
+        {
+          "cardId": 82307
+        },
+        {
+          "cardId": 82290
+        },
+        {
+          "cardId": 82306
+        },
+        {
+          "cardId": 82292
+        },
+        {
+          "cardId": 82298
+        },
+        {
+          "cardId": 82303
+        },
+        {
+          "cardId": 82300
+        },
+        {
+          "cardId": 82301
+        },
+        {
+          "cardId": 82310
+        },
+        {
+          "cardId": 82315
+        },
+        {
+          "cardId": 82311
+        },
+        {
+          "cardId": 82316
+        },
+        {
+          "cardId": 82312
+        },
+        {
+          "cardId": 82314
+        },
+        {
+          "cardId": 82296
+        },
+        {
+          "cardId": 82289
+        },
+        {
+          "cardId": 82313
+        },
+        {
+          "cardId": 82321
+        },
+        {
+          "cardId": 82317
+        },
+        {
+          "cardId": 82295
+        },
+        {
+          "cardId": 82294
+        },
+        {
+          "cardId": 82318
+        },
+        {
+          "cardId": 82319
+        },
+        {
+          "cardId": 82297
+        },
+        {
+          "cardId": 82320
+        },
+        {
+          "cardId": 82322
+        },
+        {
+          "cardId": 82309
+        }
+      ],
+      "totalPoints": 35,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83934
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "Live Level 1 - Los Angeles Dodgers",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Dodger Stadium",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81783
+        },
+        {
+          "cardId": 81774
+        },
+        {
+          "cardId": 81768
+        },
+        {
+          "cardId": 81775
+        },
+        {
+          "cardId": 81772
+        },
+        {
+          "cardId": 81777
+        },
+        {
+          "cardId": 81780
+        },
+        {
+          "cardId": 81779
+        },
+        {
+          "cardId": 81785
+        },
+        {
+          "cardId": 81773
+        },
+        {
+          "cardId": 81778
+        },
+        {
+          "cardId": 81793
+        },
+        {
+          "cardId": 81792
+        },
+        {
+          "cardId": 81776
+        },
+        {
+          "cardId": 81767
+        },
+        {
+          "cardId": 81781
+        },
+        {
+          "cardId": 81782
+        },
+        {
+          "cardId": 81791
+        },
+        {
+          "cardId": 81787
+        },
+        {
+          "cardId": 81790
+        },
+        {
+          "cardId": 81789
+        },
+        {
+          "cardId": 81769
+        },
+        {
+          "cardId": 81794
+        },
+        {
+          "cardId": 81786
+        },
+        {
+          "cardId": 81796
+        },
+        {
+          "cardId": 81771
+        },
+        {
+          "cardId": 81795
+        },
+        {
+          "cardId": 81770
+        },
+        {
+          "cardId": 81788
+        },
+        {
+          "cardId": 81797
+        },
+        {
+          "cardId": 81798
+        },
+        {
+          "cardId": 81784
+        }
+      ],
+      "totalPoints": 32,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Dodger Stadium"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Live Level 2 - Los Angeles Dodgers",
+      "type": "count",
+      "requiredCount": 31,
+      "reward": "Live Collection Reward - Historical All-Star SP Walker Buehler LAD 2021, 2x Diamond Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81783
+        },
+        {
+          "cardId": 81774
+        },
+        {
+          "cardId": 81768
+        },
+        {
+          "cardId": 81775
+        },
+        {
+          "cardId": 81772
+        },
+        {
+          "cardId": 81777
+        },
+        {
+          "cardId": 81780
+        },
+        {
+          "cardId": 81779
+        },
+        {
+          "cardId": 81785
+        },
+        {
+          "cardId": 81773
+        },
+        {
+          "cardId": 81778
+        },
+        {
+          "cardId": 81793
+        },
+        {
+          "cardId": 81792
+        },
+        {
+          "cardId": 81776
+        },
+        {
+          "cardId": 81767
+        },
+        {
+          "cardId": 81781
+        },
+        {
+          "cardId": 81782
+        },
+        {
+          "cardId": 81791
+        },
+        {
+          "cardId": 81787
+        },
+        {
+          "cardId": 81790
+        },
+        {
+          "cardId": 81789
+        },
+        {
+          "cardId": 81769
+        },
+        {
+          "cardId": 81794
+        },
+        {
+          "cardId": 81786
+        },
+        {
+          "cardId": 81796
+        },
+        {
+          "cardId": 81771
+        },
+        {
+          "cardId": 81795
+        },
+        {
+          "cardId": 81770
+        },
+        {
+          "cardId": 81788
+        },
+        {
+          "cardId": 81797
+        },
+        {
+          "cardId": 81798
+        },
+        {
+          "cardId": 81784
+        }
+      ],
+      "totalPoints": 32,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83892
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Live Level 1 - Miami Marlins",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Standard Pack, Park: LoanDepot Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82115
+        },
+        {
+          "cardId": 82107
+        },
+        {
+          "cardId": 82104
+        },
+        {
+          "cardId": 82099
+        },
+        {
+          "cardId": 82111
+        },
+        {
+          "cardId": 82114
+        },
+        {
+          "cardId": 82110
+        },
+        {
+          "cardId": 82109
+        },
+        {
+          "cardId": 82119
+        },
+        {
+          "cardId": 82124
+        },
+        {
+          "cardId": 82113
+        },
+        {
+          "cardId": 82116
+        },
+        {
+          "cardId": 82112
+        },
+        {
+          "cardId": 82106
+        },
+        {
+          "cardId": 82117
+        },
+        {
+          "cardId": 82122
+        },
+        {
+          "cardId": 82123
+        },
+        {
+          "cardId": 82102
+        },
+        {
+          "cardId": 82121
+        },
+        {
+          "cardId": 82100
+        },
+        {
+          "cardId": 82101
+        },
+        {
+          "cardId": 82120
+        },
+        {
+          "cardId": 82103
+        },
+        {
+          "cardId": 82105
+        },
+        {
+          "cardId": 82125
+        },
+        {
+          "cardId": 82128
+        },
+        {
+          "cardId": 82126
+        },
+        {
+          "cardId": 82127
+        },
+        {
+          "cardId": 82118
+        },
+        {
+          "cardId": 82129
+        },
+        {
+          "cardId": 82108
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "LoanDepot Park"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Live Level 2 - Miami Marlins",
+      "type": "count",
+      "requiredCount": 30,
+      "reward": "Live Collection Reward - Historical All-Star SP Carl Pavano FLO 2004, Standard Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82115
+        },
+        {
+          "cardId": 82107
+        },
+        {
+          "cardId": 82104
+        },
+        {
+          "cardId": 82099
+        },
+        {
+          "cardId": 82111
+        },
+        {
+          "cardId": 82114
+        },
+        {
+          "cardId": 82110
+        },
+        {
+          "cardId": 82109
+        },
+        {
+          "cardId": 82119
+        },
+        {
+          "cardId": 82124
+        },
+        {
+          "cardId": 82113
+        },
+        {
+          "cardId": 82116
+        },
+        {
+          "cardId": 82112
+        },
+        {
+          "cardId": 82106
+        },
+        {
+          "cardId": 82117
+        },
+        {
+          "cardId": 82122
+        },
+        {
+          "cardId": 82123
+        },
+        {
+          "cardId": 82102
+        },
+        {
+          "cardId": 82121
+        },
+        {
+          "cardId": 82100
+        },
+        {
+          "cardId": 82101
+        },
+        {
+          "cardId": 82120
+        },
+        {
+          "cardId": 82103
+        },
+        {
+          "cardId": 82105
+        },
+        {
+          "cardId": 82125
+        },
+        {
+          "cardId": 82128
+        },
+        {
+          "cardId": 82126
+        },
+        {
+          "cardId": 82127
+        },
+        {
+          "cardId": 82118
+        },
+        {
+          "cardId": 82129
+        },
+        {
+          "cardId": 82108
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83887
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Live Level 1 - Milwaukee Brewers",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: American Family Field",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81926
+        },
+        {
+          "cardId": 81932
+        },
+        {
+          "cardId": 81931
+        },
+        {
+          "cardId": 81927
+        },
+        {
+          "cardId": 81925
+        },
+        {
+          "cardId": 81933
+        },
+        {
+          "cardId": 81935
+        },
+        {
+          "cardId": 81921
+        },
+        {
+          "cardId": 81930
+        },
+        {
+          "cardId": 81934
+        },
+        {
+          "cardId": 81943
+        },
+        {
+          "cardId": 81924
+        },
+        {
+          "cardId": 81923
+        },
+        {
+          "cardId": 81929
+        },
+        {
+          "cardId": 81940
+        },
+        {
+          "cardId": 81942
+        },
+        {
+          "cardId": 81938
+        },
+        {
+          "cardId": 81939
+        },
+        {
+          "cardId": 81936
+        },
+        {
+          "cardId": 81920
+        },
+        {
+          "cardId": 81946
+        },
+        {
+          "cardId": 81948
+        },
+        {
+          "cardId": 81945
+        },
+        {
+          "cardId": 81947
+        },
+        {
+          "cardId": 81937
+        },
+        {
+          "cardId": 81944
+        },
+        {
+          "cardId": 81922
+        },
+        {
+          "cardId": 81941
+        },
+        {
+          "cardId": 81928
+        }
+      ],
+      "totalPoints": 29,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "American Family Field"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Live Level 2 - Milwaukee Brewers",
+      "type": "count",
+      "requiredCount": 26,
+      "reward": "Live Collection Reward - Snapshot SS Willy Adames MIL 2022, 2x Gold Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81926
+        },
+        {
+          "cardId": 81932
+        },
+        {
+          "cardId": 81931
+        },
+        {
+          "cardId": 81927
+        },
+        {
+          "cardId": 81925
+        },
+        {
+          "cardId": 81933
+        },
+        {
+          "cardId": 81935
+        },
+        {
+          "cardId": 81921
+        },
+        {
+          "cardId": 81930
+        },
+        {
+          "cardId": 81934
+        },
+        {
+          "cardId": 81943
+        },
+        {
+          "cardId": 81924
+        },
+        {
+          "cardId": 81923
+        },
+        {
+          "cardId": 81929
+        },
+        {
+          "cardId": 81940
+        },
+        {
+          "cardId": 81942
+        },
+        {
+          "cardId": 81938
+        },
+        {
+          "cardId": 81939
+        },
+        {
+          "cardId": 81936
+        },
+        {
+          "cardId": 81920
+        },
+        {
+          "cardId": 81946
+        },
+        {
+          "cardId": 81948
+        },
+        {
+          "cardId": 81945
+        },
+        {
+          "cardId": 81947
+        },
+        {
+          "cardId": 81937
+        },
+        {
+          "cardId": 81944
+        },
+        {
+          "cardId": 81922
+        },
+        {
+          "cardId": 81941
+        },
+        {
+          "cardId": 81928
+        }
+      ],
+      "totalPoints": 29,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83584
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Live Level 1 - Minnesota Twins",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Standard Pack, Park: Target Field",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82325
+        },
+        {
+          "cardId": 82342
+        },
+        {
+          "cardId": 82332
+        },
+        {
+          "cardId": 82335
+        },
+        {
+          "cardId": 82327
+        },
+        {
+          "cardId": 82334
+        },
+        {
+          "cardId": 82339
+        },
+        {
+          "cardId": 82328
+        },
+        {
+          "cardId": 82343
+        },
+        {
+          "cardId": 82340
+        },
+        {
+          "cardId": 82344
+        },
+        {
+          "cardId": 82333
+        },
+        {
+          "cardId": 82336
+        },
+        {
+          "cardId": 82324
+        },
+        {
+          "cardId": 82337
+        },
+        {
+          "cardId": 82341
+        },
+        {
+          "cardId": 82338
+        },
+        {
+          "cardId": 82345
+        },
+        {
+          "cardId": 82351
+        },
+        {
+          "cardId": 82330
+        },
+        {
+          "cardId": 82347
+        },
+        {
+          "cardId": 82346
+        },
+        {
+          "cardId": 82329
+        },
+        {
+          "cardId": 82348
+        },
+        {
+          "cardId": 82323
+        },
+        {
+          "cardId": 82349
+        },
+        {
+          "cardId": 82354
+        },
+        {
+          "cardId": 82331
+        },
+        {
+          "cardId": 82355
+        },
+        {
+          "cardId": 82350
+        },
+        {
+          "cardId": 82353
+        },
+        {
+          "cardId": 82352
+        },
+        {
+          "cardId": 82326
+        }
+      ],
+      "totalPoints": 33,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "Target Field"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Live Level 2 - Minnesota Twins",
+      "type": "count",
+      "requiredCount": 31,
+      "reward": "Live Collection Reward - Snapshot 3B Eddie Yost WS1 1951, Standard Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82325
+        },
+        {
+          "cardId": 82342
+        },
+        {
+          "cardId": 82332
+        },
+        {
+          "cardId": 82335
+        },
+        {
+          "cardId": 82327
+        },
+        {
+          "cardId": 82334
+        },
+        {
+          "cardId": 82339
+        },
+        {
+          "cardId": 82328
+        },
+        {
+          "cardId": 82343
+        },
+        {
+          "cardId": 82340
+        },
+        {
+          "cardId": 82344
+        },
+        {
+          "cardId": 82333
+        },
+        {
+          "cardId": 82336
+        },
+        {
+          "cardId": 82324
+        },
+        {
+          "cardId": 82337
+        },
+        {
+          "cardId": 82341
+        },
+        {
+          "cardId": 82338
+        },
+        {
+          "cardId": 82345
+        },
+        {
+          "cardId": 82351
+        },
+        {
+          "cardId": 82330
+        },
+        {
+          "cardId": 82347
+        },
+        {
+          "cardId": 82346
+        },
+        {
+          "cardId": 82329
+        },
+        {
+          "cardId": 82348
+        },
+        {
+          "cardId": 82323
+        },
+        {
+          "cardId": 82349
+        },
+        {
+          "cardId": 82354
+        },
+        {
+          "cardId": 82331
+        },
+        {
+          "cardId": 82355
+        },
+        {
+          "cardId": 82350
+        },
+        {
+          "cardId": 82353
+        },
+        {
+          "cardId": 82352
+        },
+        {
+          "cardId": 82326
+        }
+      ],
+      "totalPoints": 33,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84192
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Live Level 1 - New York Mets",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Citi Field",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82082
+        },
+        {
+          "cardId": 82084
+        },
+        {
+          "cardId": 82075
+        },
+        {
+          "cardId": 82078
+        },
+        {
+          "cardId": 82070
+        },
+        {
+          "cardId": 82069
+        },
+        {
+          "cardId": 82071
+        },
+        {
+          "cardId": 82080
+        },
+        {
+          "cardId": 82072
+        },
+        {
+          "cardId": 82079
+        },
+        {
+          "cardId": 82081
+        },
+        {
+          "cardId": 82076
+        },
+        {
+          "cardId": 84585
+        },
+        {
+          "cardId": 82077
+        },
+        {
+          "cardId": 82086
+        },
+        {
+          "cardId": 82074
+        },
+        {
+          "cardId": 82090
+        },
+        {
+          "cardId": 82092
+        },
+        {
+          "cardId": 82091
+        },
+        {
+          "cardId": 82088
+        },
+        {
+          "cardId": 82087
+        },
+        {
+          "cardId": 82093
+        },
+        {
+          "cardId": 82095
+        },
+        {
+          "cardId": 82094
+        },
+        {
+          "cardId": 82098
+        },
+        {
+          "cardId": 82096
+        },
+        {
+          "cardId": 82089
+        },
+        {
+          "cardId": 82097
+        },
+        {
+          "cardId": 82073
+        },
+        {
+          "cardId": 82083
+        },
+        {
+          "cardId": 82085
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Citi Field"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Live Level 2 - New York Mets",
+      "type": "count",
+      "requiredCount": 29,
+      "reward": "Live Collection Reward - Snapshot SP Dwight Gooden NYM 1990, 2x Gold Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82082
+        },
+        {
+          "cardId": 82084
+        },
+        {
+          "cardId": 82075
+        },
+        {
+          "cardId": 82078
+        },
+        {
+          "cardId": 82070
+        },
+        {
+          "cardId": 82069
+        },
+        {
+          "cardId": 82071
+        },
+        {
+          "cardId": 82080
+        },
+        {
+          "cardId": 82072
+        },
+        {
+          "cardId": 82079
+        },
+        {
+          "cardId": 82081
+        },
+        {
+          "cardId": 82076
+        },
+        {
+          "cardId": 84585
+        },
+        {
+          "cardId": 82077
+        },
+        {
+          "cardId": 82086
+        },
+        {
+          "cardId": 82074
+        },
+        {
+          "cardId": 82090
+        },
+        {
+          "cardId": 82092
+        },
+        {
+          "cardId": 82091
+        },
+        {
+          "cardId": 82088
+        },
+        {
+          "cardId": 82087
+        },
+        {
+          "cardId": 82093
+        },
+        {
+          "cardId": 82095
+        },
+        {
+          "cardId": 82094
+        },
+        {
+          "cardId": 82098
+        },
+        {
+          "cardId": 82096
+        },
+        {
+          "cardId": 82089
+        },
+        {
+          "cardId": 82097
+        },
+        {
+          "cardId": 82073
+        },
+        {
+          "cardId": 82083
+        },
+        {
+          "cardId": 82085
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83262
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Live Level 1 - New York Yankees",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Yankee Stadium",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82572
+        },
+        {
+          "cardId": 82571
+        },
+        {
+          "cardId": 82573
+        },
+        {
+          "cardId": 82556
+        },
+        {
+          "cardId": 82555
+        },
+        {
+          "cardId": 82565
+        },
+        {
+          "cardId": 82553
+        },
+        {
+          "cardId": 82574
+        },
+        {
+          "cardId": 82570
+        },
+        {
+          "cardId": 82559
+        },
+        {
+          "cardId": 82566
+        },
+        {
+          "cardId": 82582
+        },
+        {
+          "cardId": 82583
+        },
+        {
+          "cardId": 82567
+        },
+        {
+          "cardId": 82557
+        },
+        {
+          "cardId": 82564
+        },
+        {
+          "cardId": 82576
+        },
+        {
+          "cardId": 82575
+        },
+        {
+          "cardId": 82569
+        },
+        {
+          "cardId": 82554
+        },
+        {
+          "cardId": 82561
+        },
+        {
+          "cardId": 82585
+        },
+        {
+          "cardId": 82581
+        },
+        {
+          "cardId": 82579
+        },
+        {
+          "cardId": 82552
+        },
+        {
+          "cardId": 82551
+        },
+        {
+          "cardId": 82560
+        },
+        {
+          "cardId": 82580
+        },
+        {
+          "cardId": 82586
+        },
+        {
+          "cardId": 82587
+        },
+        {
+          "cardId": 82562
+        },
+        {
+          "cardId": 82577
+        },
+        {
+          "cardId": 82584
+        },
+        {
+          "cardId": 82578
+        },
+        {
+          "cardId": 82563
+        },
+        {
+          "cardId": 82568
+        },
+        {
+          "cardId": 82558
+        }
+      ],
+      "totalPoints": 37,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Yankee Stadium"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Live Level 2 - New York Yankees",
+      "type": "count",
+      "requiredCount": 36,
+      "reward": "Live Collection Reward - Historical All-Star RP Dellin Betances NYY 2014, 2x Gold Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82572
+        },
+        {
+          "cardId": 82571
+        },
+        {
+          "cardId": 82573
+        },
+        {
+          "cardId": 82556
+        },
+        {
+          "cardId": 82555
+        },
+        {
+          "cardId": 82565
+        },
+        {
+          "cardId": 82553
+        },
+        {
+          "cardId": 82574
+        },
+        {
+          "cardId": 82570
+        },
+        {
+          "cardId": 82559
+        },
+        {
+          "cardId": 82566
+        },
+        {
+          "cardId": 82582
+        },
+        {
+          "cardId": 82583
+        },
+        {
+          "cardId": 82567
+        },
+        {
+          "cardId": 82557
+        },
+        {
+          "cardId": 82564
+        },
+        {
+          "cardId": 82576
+        },
+        {
+          "cardId": 82575
+        },
+        {
+          "cardId": 82569
+        },
+        {
+          "cardId": 82554
+        },
+        {
+          "cardId": 82561
+        },
+        {
+          "cardId": 82585
+        },
+        {
+          "cardId": 82581
+        },
+        {
+          "cardId": 82579
+        },
+        {
+          "cardId": 82552
+        },
+        {
+          "cardId": 82551
+        },
+        {
+          "cardId": 82560
+        },
+        {
+          "cardId": 82580
+        },
+        {
+          "cardId": 82586
+        },
+        {
+          "cardId": 82587
+        },
+        {
+          "cardId": 82562
+        },
+        {
+          "cardId": 82577
+        },
+        {
+          "cardId": 82584
+        },
+        {
+          "cardId": 82578
+        },
+        {
+          "cardId": 82563
+        },
+        {
+          "cardId": 82568
+        },
+        {
+          "cardId": 82558
+        }
+      ],
+      "totalPoints": 37,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83904
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Live Level 1 - Philadelphia Phillies",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Citizens Bank Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82057
+        },
+        {
+          "cardId": 82047
+        },
+        {
+          "cardId": 82048
+        },
+        {
+          "cardId": 82051
+        },
+        {
+          "cardId": 82053
+        },
+        {
+          "cardId": 82040
+        },
+        {
+          "cardId": 82046
+        },
+        {
+          "cardId": 82054
+        },
+        {
+          "cardId": 82050
+        },
+        {
+          "cardId": 82052
+        },
+        {
+          "cardId": 82045
+        },
+        {
+          "cardId": 82063
+        },
+        {
+          "cardId": 82055
+        },
+        {
+          "cardId": 82049
+        },
+        {
+          "cardId": 82061
+        },
+        {
+          "cardId": 82042
+        },
+        {
+          "cardId": 82044
+        },
+        {
+          "cardId": 82062
+        },
+        {
+          "cardId": 82043
+        },
+        {
+          "cardId": 82038
+        },
+        {
+          "cardId": 82041
+        },
+        {
+          "cardId": 82059
+        },
+        {
+          "cardId": 82060
+        },
+        {
+          "cardId": 82058
+        },
+        {
+          "cardId": 82067
+        },
+        {
+          "cardId": 82065
+        },
+        {
+          "cardId": 82066
+        },
+        {
+          "cardId": 82064
+        },
+        {
+          "cardId": 82068
+        },
+        {
+          "cardId": 82039
+        },
+        {
+          "cardId": 82056
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Citizens Bank Park"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Live Level 2 - Philadelphia Phillies",
+      "type": "count",
+      "requiredCount": 29,
+      "reward": "Live Collection Reward - All-Time Legend RF George Harper PHI Peak, Diamond Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82057
+        },
+        {
+          "cardId": 82047
+        },
+        {
+          "cardId": 82048
+        },
+        {
+          "cardId": 82051
+        },
+        {
+          "cardId": 82053
+        },
+        {
+          "cardId": 82040
+        },
+        {
+          "cardId": 82046
+        },
+        {
+          "cardId": 82054
+        },
+        {
+          "cardId": 82050
+        },
+        {
+          "cardId": 82052
+        },
+        {
+          "cardId": 82045
+        },
+        {
+          "cardId": 82063
+        },
+        {
+          "cardId": 82055
+        },
+        {
+          "cardId": 82049
+        },
+        {
+          "cardId": 82061
+        },
+        {
+          "cardId": 82042
+        },
+        {
+          "cardId": 82044
+        },
+        {
+          "cardId": 82062
+        },
+        {
+          "cardId": 82043
+        },
+        {
+          "cardId": 82038
+        },
+        {
+          "cardId": 82041
+        },
+        {
+          "cardId": 82059
+        },
+        {
+          "cardId": 82060
+        },
+        {
+          "cardId": 82058
+        },
+        {
+          "cardId": 82067
+        },
+        {
+          "cardId": 82065
+        },
+        {
+          "cardId": 82066
+        },
+        {
+          "cardId": 82064
+        },
+        {
+          "cardId": 82068
+        },
+        {
+          "cardId": 82039
+        },
+        {
+          "cardId": 82056
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84193
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Live Level 1 - Pittsburgh Pirates",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: PNC Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81893
+        },
+        {
+          "cardId": 81906
+        },
+        {
+          "cardId": 81897
+        },
+        {
+          "cardId": 81905
+        },
+        {
+          "cardId": 81896
+        },
+        {
+          "cardId": 81892
+        },
+        {
+          "cardId": 81901
+        },
+        {
+          "cardId": 81903
+        },
+        {
+          "cardId": 81904
+        },
+        {
+          "cardId": 81915
+        },
+        {
+          "cardId": 81898
+        },
+        {
+          "cardId": 81902
+        },
+        {
+          "cardId": 81907
+        },
+        {
+          "cardId": 81899
+        },
+        {
+          "cardId": 81908
+        },
+        {
+          "cardId": 81914
+        },
+        {
+          "cardId": 81894
+        },
+        {
+          "cardId": 81913
+        },
+        {
+          "cardId": 81912
+        },
+        {
+          "cardId": 81916
+        },
+        {
+          "cardId": 81910
+        },
+        {
+          "cardId": 81917
+        },
+        {
+          "cardId": 81909
+        },
+        {
+          "cardId": 81911
+        },
+        {
+          "cardId": 81918
+        },
+        {
+          "cardId": 81919
+        },
+        {
+          "cardId": 81895
+        },
+        {
+          "cardId": 81900
+        }
+      ],
+      "totalPoints": 28,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "PNC Park"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Live Level 2 - Pittsburgh Pirates",
+      "type": "count",
+      "requiredCount": 27,
+      "reward": "Live Collection Reward - Hardware Heroes SP Frank Killen PIT 1893, 2x Silver Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81893
+        },
+        {
+          "cardId": 81906
+        },
+        {
+          "cardId": 81897
+        },
+        {
+          "cardId": 81905
+        },
+        {
+          "cardId": 81896
+        },
+        {
+          "cardId": 81892
+        },
+        {
+          "cardId": 81901
+        },
+        {
+          "cardId": 81903
+        },
+        {
+          "cardId": 81904
+        },
+        {
+          "cardId": 81915
+        },
+        {
+          "cardId": 81898
+        },
+        {
+          "cardId": 81902
+        },
+        {
+          "cardId": 81907
+        },
+        {
+          "cardId": 81899
+        },
+        {
+          "cardId": 81908
+        },
+        {
+          "cardId": 81914
+        },
+        {
+          "cardId": 81894
+        },
+        {
+          "cardId": 81913
+        },
+        {
+          "cardId": 81912
+        },
+        {
+          "cardId": 81916
+        },
+        {
+          "cardId": 81910
+        },
+        {
+          "cardId": 81917
+        },
+        {
+          "cardId": 81909
+        },
+        {
+          "cardId": 81911
+        },
+        {
+          "cardId": 81918
+        },
+        {
+          "cardId": 81919
+        },
+        {
+          "cardId": 81895
+        },
+        {
+          "cardId": 81900
+        }
+      ],
+      "totalPoints": 28,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 82675
+        },
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Live Level 1 - San Diego Padres",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Standard Pack, Park: Petco Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81747
+        },
+        {
+          "cardId": 81746
+        },
+        {
+          "cardId": 81750
+        },
+        {
+          "cardId": 81752
+        },
+        {
+          "cardId": 81744
+        },
+        {
+          "cardId": 81733
+        },
+        {
+          "cardId": 81735
+        },
+        {
+          "cardId": 81748
+        },
+        {
+          "cardId": 81749
+        },
+        {
+          "cardId": 81761
+        },
+        {
+          "cardId": 81734
+        },
+        {
+          "cardId": 81742
+        },
+        {
+          "cardId": 81745
+        },
+        {
+          "cardId": 81753
+        },
+        {
+          "cardId": 81743
+        },
+        {
+          "cardId": 81760
+        },
+        {
+          "cardId": 81736
+        },
+        {
+          "cardId": 81763
+        },
+        {
+          "cardId": 81737
+        },
+        {
+          "cardId": 81759
+        },
+        {
+          "cardId": 81758
+        },
+        {
+          "cardId": 81764
+        },
+        {
+          "cardId": 81757
+        },
+        {
+          "cardId": 81756
+        },
+        {
+          "cardId": 81738
+        },
+        {
+          "cardId": 81741
+        },
+        {
+          "cardId": 81762
+        },
+        {
+          "cardId": 81755
+        },
+        {
+          "cardId": 81740
+        },
+        {
+          "cardId": 81765
+        },
+        {
+          "cardId": 81766
+        },
+        {
+          "cardId": 81739
+        },
+        {
+          "cardId": 81754
+        },
+        {
+          "cardId": 81751
+        }
+      ],
+      "totalPoints": 34,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "Petco Park"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Live Level 2 - San Diego Padres",
+      "type": "count",
+      "requiredCount": 34,
+      "reward": "Live Collection Reward - Hall of Fame CL Trevor Hoffman SD 1994, Diamond Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81747
+        },
+        {
+          "cardId": 81746
+        },
+        {
+          "cardId": 81750
+        },
+        {
+          "cardId": 81752
+        },
+        {
+          "cardId": 81744
+        },
+        {
+          "cardId": 81733
+        },
+        {
+          "cardId": 81735
+        },
+        {
+          "cardId": 81748
+        },
+        {
+          "cardId": 81749
+        },
+        {
+          "cardId": 81761
+        },
+        {
+          "cardId": 81734
+        },
+        {
+          "cardId": 81742
+        },
+        {
+          "cardId": 81745
+        },
+        {
+          "cardId": 81753
+        },
+        {
+          "cardId": 81743
+        },
+        {
+          "cardId": 81760
+        },
+        {
+          "cardId": 81736
+        },
+        {
+          "cardId": 81763
+        },
+        {
+          "cardId": 81737
+        },
+        {
+          "cardId": 81759
+        },
+        {
+          "cardId": 81758
+        },
+        {
+          "cardId": 81764
+        },
+        {
+          "cardId": 81757
+        },
+        {
+          "cardId": 81756
+        },
+        {
+          "cardId": 81738
+        },
+        {
+          "cardId": 81741
+        },
+        {
+          "cardId": 81762
+        },
+        {
+          "cardId": 81755
+        },
+        {
+          "cardId": 81740
+        },
+        {
+          "cardId": 81765
+        },
+        {
+          "cardId": 81766
+        },
+        {
+          "cardId": 81739
+        },
+        {
+          "cardId": 81754
+        },
+        {
+          "cardId": 81751
+        }
+      ],
+      "totalPoints": 34,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83299
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Live Level 1 - Seattle Mariners",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: T-Mobile Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82240
+        },
+        {
+          "cardId": 82238
+        },
+        {
+          "cardId": 82225
+        },
+        {
+          "cardId": 82235
+        },
+        {
+          "cardId": 82224
+        },
+        {
+          "cardId": 82231
+        },
+        {
+          "cardId": 82226
+        },
+        {
+          "cardId": 82241
+        },
+        {
+          "cardId": 82242
+        },
+        {
+          "cardId": 82249
+        },
+        {
+          "cardId": 82245
+        },
+        {
+          "cardId": 82239
+        },
+        {
+          "cardId": 82232
+        },
+        {
+          "cardId": 82233
+        },
+        {
+          "cardId": 82236
+        },
+        {
+          "cardId": 82234
+        },
+        {
+          "cardId": 82228
+        },
+        {
+          "cardId": 82229
+        },
+        {
+          "cardId": 82246
+        },
+        {
+          "cardId": 82248
+        },
+        {
+          "cardId": 82227
+        },
+        {
+          "cardId": 82247
+        },
+        {
+          "cardId": 82251
+        },
+        {
+          "cardId": 82250
+        },
+        {
+          "cardId": 82243
+        },
+        {
+          "cardId": 82244
+        },
+        {
+          "cardId": 82230
+        },
+        {
+          "cardId": 82252
+        },
+        {
+          "cardId": 82253
+        },
+        {
+          "cardId": 82254
+        },
+        {
+          "cardId": 82237
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "T-Mobile Park"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Live Level 2 - Seattle Mariners",
+      "type": "count",
+      "requiredCount": 29,
+      "reward": "Live Collection Reward - Veteran Presence RF Nelson Cruz SEA 2015, Diamond Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82240
+        },
+        {
+          "cardId": 82238
+        },
+        {
+          "cardId": 82225
+        },
+        {
+          "cardId": 82235
+        },
+        {
+          "cardId": 82224
+        },
+        {
+          "cardId": 82231
+        },
+        {
+          "cardId": 82226
+        },
+        {
+          "cardId": 82241
+        },
+        {
+          "cardId": 82242
+        },
+        {
+          "cardId": 82249
+        },
+        {
+          "cardId": 82245
+        },
+        {
+          "cardId": 82239
+        },
+        {
+          "cardId": 82232
+        },
+        {
+          "cardId": 82233
+        },
+        {
+          "cardId": 82236
+        },
+        {
+          "cardId": 82234
+        },
+        {
+          "cardId": 82228
+        },
+        {
+          "cardId": 82229
+        },
+        {
+          "cardId": 82246
+        },
+        {
+          "cardId": 82248
+        },
+        {
+          "cardId": 82227
+        },
+        {
+          "cardId": 82247
+        },
+        {
+          "cardId": 82251
+        },
+        {
+          "cardId": 82250
+        },
+        {
+          "cardId": 82243
+        },
+        {
+          "cardId": 82244
+        },
+        {
+          "cardId": 82230
+        },
+        {
+          "cardId": 82252
+        },
+        {
+          "cardId": 82253
+        },
+        {
+          "cardId": 82254
+        },
+        {
+          "cardId": 82237
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83853
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Live Level 1 - San Francisco Giants",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Oracle Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81717
+        },
+        {
+          "cardId": 81721
+        },
+        {
+          "cardId": 81712
+        },
+        {
+          "cardId": 81705
+        },
+        {
+          "cardId": 81708
+        },
+        {
+          "cardId": 81714
+        },
+        {
+          "cardId": 81719
+        },
+        {
+          "cardId": 81718
+        },
+        {
+          "cardId": 81713
+        },
+        {
+          "cardId": 81728
+        },
+        {
+          "cardId": 81716
+        },
+        {
+          "cardId": 81706
+        },
+        {
+          "cardId": 81715
+        },
+        {
+          "cardId": 81707
+        },
+        {
+          "cardId": 81711
+        },
+        {
+          "cardId": 81709
+        },
+        {
+          "cardId": 81726
+        },
+        {
+          "cardId": 81723
+        },
+        {
+          "cardId": 81724
+        },
+        {
+          "cardId": 81727
+        },
+        {
+          "cardId": 81704
+        },
+        {
+          "cardId": 81725
+        },
+        {
+          "cardId": 81729
+        },
+        {
+          "cardId": 81710
+        },
+        {
+          "cardId": 81722
+        },
+        {
+          "cardId": 81730
+        },
+        {
+          "cardId": 81732
+        },
+        {
+          "cardId": 81731
+        },
+        {
+          "cardId": 81720
+        }
+      ],
+      "totalPoints": 29,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Oracle Park"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Live Level 2 - San Francisco Giants",
+      "type": "count",
+      "requiredCount": 27,
+      "reward": "Live Collection Reward - Unsung Heroes LF Ken Henderson SF 1970, Silver Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81717
+        },
+        {
+          "cardId": 81721
+        },
+        {
+          "cardId": 81712
+        },
+        {
+          "cardId": 81705
+        },
+        {
+          "cardId": 81708
+        },
+        {
+          "cardId": 81714
+        },
+        {
+          "cardId": 81719
+        },
+        {
+          "cardId": 81718
+        },
+        {
+          "cardId": 81713
+        },
+        {
+          "cardId": 81728
+        },
+        {
+          "cardId": 81716
+        },
+        {
+          "cardId": 81706
+        },
+        {
+          "cardId": 81715
+        },
+        {
+          "cardId": 81707
+        },
+        {
+          "cardId": 81711
+        },
+        {
+          "cardId": 81709
+        },
+        {
+          "cardId": 81726
+        },
+        {
+          "cardId": 81723
+        },
+        {
+          "cardId": 81724
+        },
+        {
+          "cardId": 81727
+        },
+        {
+          "cardId": 81704
+        },
+        {
+          "cardId": 81725
+        },
+        {
+          "cardId": 81729
+        },
+        {
+          "cardId": 81710
+        },
+        {
+          "cardId": 81722
+        },
+        {
+          "cardId": 81730
+        },
+        {
+          "cardId": 81732
+        },
+        {
+          "cardId": 81731
+        },
+        {
+          "cardId": 81720
+        }
+      ],
+      "totalPoints": 29,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83753
+        },
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Live Level 1 - St. Louis Cardinals",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Busch Stadium",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81877
+        },
+        {
+          "cardId": 81869
+        },
+        {
+          "cardId": 81863
+        },
+        {
+          "cardId": 81875
+        },
+        {
+          "cardId": 81874
+        },
+        {
+          "cardId": 81879
+        },
+        {
+          "cardId": 81872
+        },
+        {
+          "cardId": 81871
+        },
+        {
+          "cardId": 81873
+        },
+        {
+          "cardId": 81890
+        },
+        {
+          "cardId": 81876
+        },
+        {
+          "cardId": 81870
+        },
+        {
+          "cardId": 81868
+        },
+        {
+          "cardId": 81864
+        },
+        {
+          "cardId": 81865
+        },
+        {
+          "cardId": 81882
+        },
+        {
+          "cardId": 81886
+        },
+        {
+          "cardId": 81883
+        },
+        {
+          "cardId": 81867
+        },
+        {
+          "cardId": 81884
+        },
+        {
+          "cardId": 81866
+        },
+        {
+          "cardId": 81885
+        },
+        {
+          "cardId": 81888
+        },
+        {
+          "cardId": 81891
+        },
+        {
+          "cardId": 81880
+        },
+        {
+          "cardId": 81889
+        },
+        {
+          "cardId": 81887
+        },
+        {
+          "cardId": 81881
+        },
+        {
+          "cardId": 81878
+        }
+      ],
+      "totalPoints": 29,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Busch Stadium"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Live Level 2 - St. Louis Cardinals",
+      "type": "count",
+      "requiredCount": 28,
+      "reward": "Live Collection Reward - Unsung Heroes SP Silver King KC2 1889, Standard Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 81877
+        },
+        {
+          "cardId": 81869
+        },
+        {
+          "cardId": 81863
+        },
+        {
+          "cardId": 81875
+        },
+        {
+          "cardId": 81874
+        },
+        {
+          "cardId": 81879
+        },
+        {
+          "cardId": 81872
+        },
+        {
+          "cardId": 81871
+        },
+        {
+          "cardId": 81873
+        },
+        {
+          "cardId": 81890
+        },
+        {
+          "cardId": 81876
+        },
+        {
+          "cardId": 81870
+        },
+        {
+          "cardId": 81868
+        },
+        {
+          "cardId": 81864
+        },
+        {
+          "cardId": 81865
+        },
+        {
+          "cardId": 81882
+        },
+        {
+          "cardId": 81886
+        },
+        {
+          "cardId": 81883
+        },
+        {
+          "cardId": 81867
+        },
+        {
+          "cardId": 81884
+        },
+        {
+          "cardId": 81866
+        },
+        {
+          "cardId": 81885
+        },
+        {
+          "cardId": 81888
+        },
+        {
+          "cardId": 81891
+        },
+        {
+          "cardId": 81880
+        },
+        {
+          "cardId": 81889
+        },
+        {
+          "cardId": 81887
+        },
+        {
+          "cardId": 81881
+        },
+        {
+          "cardId": 81878
+        }
+      ],
+      "totalPoints": 29,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83040
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Live Level 1 - Tampa Bay Rays",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Tropicana Field",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82529
+        },
+        {
+          "cardId": 82538
+        },
+        {
+          "cardId": 82528
+        },
+        {
+          "cardId": 82520
+        },
+        {
+          "cardId": 82537
+        },
+        {
+          "cardId": 82531
+        },
+        {
+          "cardId": 82532
+        },
+        {
+          "cardId": 82534
+        },
+        {
+          "cardId": 82526
+        },
+        {
+          "cardId": 82521
+        },
+        {
+          "cardId": 82527
+        },
+        {
+          "cardId": 82536
+        },
+        {
+          "cardId": 82533
+        },
+        {
+          "cardId": 82535
+        },
+        {
+          "cardId": 82543
+        },
+        {
+          "cardId": 82519
+        },
+        {
+          "cardId": 82539
+        },
+        {
+          "cardId": 82525
+        },
+        {
+          "cardId": 82544
+        },
+        {
+          "cardId": 82545
+        },
+        {
+          "cardId": 82541
+        },
+        {
+          "cardId": 82542
+        },
+        {
+          "cardId": 82549
+        },
+        {
+          "cardId": 82547
+        },
+        {
+          "cardId": 82524
+        },
+        {
+          "cardId": 82550
+        },
+        {
+          "cardId": 82540
+        },
+        {
+          "cardId": 82548
+        },
+        {
+          "cardId": 82546
+        },
+        {
+          "cardId": 82523
+        },
+        {
+          "cardId": 82522
+        },
+        {
+          "cardId": 82530
+        }
+      ],
+      "totalPoints": 32,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Tropicana Field"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Live Level 2 - Tampa Bay Rays",
+      "type": "count",
+      "requiredCount": 31,
+      "reward": "Live Collection Reward - Snapshot LF Randy Arozarena TB 2023, 2x Gold Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82529
+        },
+        {
+          "cardId": 82538
+        },
+        {
+          "cardId": 82528
+        },
+        {
+          "cardId": 82520
+        },
+        {
+          "cardId": 82537
+        },
+        {
+          "cardId": 82531
+        },
+        {
+          "cardId": 82532
+        },
+        {
+          "cardId": 82534
+        },
+        {
+          "cardId": 82526
+        },
+        {
+          "cardId": 82521
+        },
+        {
+          "cardId": 82527
+        },
+        {
+          "cardId": 82536
+        },
+        {
+          "cardId": 82533
+        },
+        {
+          "cardId": 82535
+        },
+        {
+          "cardId": 82543
+        },
+        {
+          "cardId": 82519
+        },
+        {
+          "cardId": 82539
+        },
+        {
+          "cardId": 82525
+        },
+        {
+          "cardId": 82544
+        },
+        {
+          "cardId": 82545
+        },
+        {
+          "cardId": 82541
+        },
+        {
+          "cardId": 82542
+        },
+        {
+          "cardId": 82549
+        },
+        {
+          "cardId": 82547
+        },
+        {
+          "cardId": 82524
+        },
+        {
+          "cardId": 82550
+        },
+        {
+          "cardId": 82540
+        },
+        {
+          "cardId": 82548
+        },
+        {
+          "cardId": 82546
+        },
+        {
+          "cardId": 82523
+        },
+        {
+          "cardId": 82522
+        },
+        {
+          "cardId": 82530
+        }
+      ],
+      "totalPoints": 32,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 82922
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Live Level 1 - Texas Rangers",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Standard Pack, Park: Globe Life Field",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82206
+        },
+        {
+          "cardId": 82202
+        },
+        {
+          "cardId": 82193
+        },
+        {
+          "cardId": 82201
+        },
+        {
+          "cardId": 82209
+        },
+        {
+          "cardId": 82196
+        },
+        {
+          "cardId": 82197
+        },
+        {
+          "cardId": 82205
+        },
+        {
+          "cardId": 82194
+        },
+        {
+          "cardId": 82215
+        },
+        {
+          "cardId": 82195
+        },
+        {
+          "cardId": 82210
+        },
+        {
+          "cardId": 82200
+        },
+        {
+          "cardId": 82204
+        },
+        {
+          "cardId": 82203
+        },
+        {
+          "cardId": 82213
+        },
+        {
+          "cardId": 82218
+        },
+        {
+          "cardId": 82211
+        },
+        {
+          "cardId": 82199
+        },
+        {
+          "cardId": 82198
+        },
+        {
+          "cardId": 82220
+        },
+        {
+          "cardId": 82212
+        },
+        {
+          "cardId": 82217
+        },
+        {
+          "cardId": 82216
+        },
+        {
+          "cardId": 82191
+        },
+        {
+          "cardId": 82192
+        },
+        {
+          "cardId": 82219
+        },
+        {
+          "cardId": 82223
+        },
+        {
+          "cardId": 82214
+        },
+        {
+          "cardId": 82221
+        },
+        {
+          "cardId": 82222
+        },
+        {
+          "cardId": 82207
+        },
+        {
+          "cardId": 82208
+        }
+      ],
+      "totalPoints": 33,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "Globe Life Field"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Live Level 2 - Texas Rangers",
+      "type": "count",
+      "requiredCount": 32,
+      "reward": "Live Collection Reward - Snapshot RP Joe Grzenda WS2 1971, Silver Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82206
+        },
+        {
+          "cardId": 82202
+        },
+        {
+          "cardId": 82193
+        },
+        {
+          "cardId": 82201
+        },
+        {
+          "cardId": 82209
+        },
+        {
+          "cardId": 82196
+        },
+        {
+          "cardId": 82197
+        },
+        {
+          "cardId": 82205
+        },
+        {
+          "cardId": 82194
+        },
+        {
+          "cardId": 82215
+        },
+        {
+          "cardId": 82195
+        },
+        {
+          "cardId": 82210
+        },
+        {
+          "cardId": 82200
+        },
+        {
+          "cardId": 82204
+        },
+        {
+          "cardId": 82203
+        },
+        {
+          "cardId": 82213
+        },
+        {
+          "cardId": 82218
+        },
+        {
+          "cardId": 82211
+        },
+        {
+          "cardId": 82199
+        },
+        {
+          "cardId": 82198
+        },
+        {
+          "cardId": 82220
+        },
+        {
+          "cardId": 82212
+        },
+        {
+          "cardId": 82217
+        },
+        {
+          "cardId": 82216
+        },
+        {
+          "cardId": 82191
+        },
+        {
+          "cardId": 82192
+        },
+        {
+          "cardId": 82219
+        },
+        {
+          "cardId": 82223
+        },
+        {
+          "cardId": 82214
+        },
+        {
+          "cardId": 82221
+        },
+        {
+          "cardId": 82222
+        },
+        {
+          "cardId": 82207
+        },
+        {
+          "cardId": 82208
+        }
+      ],
+      "totalPoints": 33,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83323
+        },
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Live Level 1 - Toronto Blue Jays",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "2x Standard Pack, Park: Rogers Centre",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82507
+        },
+        {
+          "cardId": 82503
+        },
+        {
+          "cardId": 82496
+        },
+        {
+          "cardId": 82501
+        },
+        {
+          "cardId": 82506
+        },
+        {
+          "cardId": 82502
+        },
+        {
+          "cardId": 82504
+        },
+        {
+          "cardId": 82497
+        },
+        {
+          "cardId": 82513
+        },
+        {
+          "cardId": 82499
+        },
+        {
+          "cardId": 82490
+        },
+        {
+          "cardId": 82500
+        },
+        {
+          "cardId": 82505
+        },
+        {
+          "cardId": 82498
+        },
+        {
+          "cardId": 82489
+        },
+        {
+          "cardId": 82494
+        },
+        {
+          "cardId": 82491
+        },
+        {
+          "cardId": 82492
+        },
+        {
+          "cardId": 82511
+        },
+        {
+          "cardId": 82493
+        },
+        {
+          "cardId": 82488
+        },
+        {
+          "cardId": 82512
+        },
+        {
+          "cardId": 82510
+        },
+        {
+          "cardId": 82495
+        },
+        {
+          "cardId": 82518
+        },
+        {
+          "cardId": 82509
+        },
+        {
+          "cardId": 82515
+        },
+        {
+          "cardId": 82517
+        },
+        {
+          "cardId": 82514
+        },
+        {
+          "cardId": 82516
+        },
+        {
+          "cardId": 82508
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "Rogers Centre"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Live Level 2 - Toronto Blue Jays",
+      "type": "count",
+      "requiredCount": 30,
+      "reward": "Live Collection Reward - Veteran Presence SP David Wells TOR 2000, 2x Gold Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82507
+        },
+        {
+          "cardId": 82503
+        },
+        {
+          "cardId": 82496
+        },
+        {
+          "cardId": 82501
+        },
+        {
+          "cardId": 82506
+        },
+        {
+          "cardId": 82502
+        },
+        {
+          "cardId": 82504
+        },
+        {
+          "cardId": 82497
+        },
+        {
+          "cardId": 82513
+        },
+        {
+          "cardId": 82499
+        },
+        {
+          "cardId": 82490
+        },
+        {
+          "cardId": 82500
+        },
+        {
+          "cardId": 82505
+        },
+        {
+          "cardId": 82498
+        },
+        {
+          "cardId": 82489
+        },
+        {
+          "cardId": 82494
+        },
+        {
+          "cardId": 82491
+        },
+        {
+          "cardId": 82492
+        },
+        {
+          "cardId": 82511
+        },
+        {
+          "cardId": 82493
+        },
+        {
+          "cardId": 82488
+        },
+        {
+          "cardId": 82512
+        },
+        {
+          "cardId": 82510
+        },
+        {
+          "cardId": 82495
+        },
+        {
+          "cardId": 82518
+        },
+        {
+          "cardId": 82509
+        },
+        {
+          "cardId": 82515
+        },
+        {
+          "cardId": 82517
+        },
+        {
+          "cardId": 82514
+        },
+        {
+          "cardId": 82516
+        },
+        {
+          "cardId": 82508
+        }
+      ],
+      "totalPoints": 31,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84082
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Live Level 1 - Washington Nationals",
+      "type": "count",
+      "requiredCount": 20,
+      "reward": "Standard Pack, Park: Nationals Park",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82021
+        },
+        {
+          "cardId": 82016
+        },
+        {
+          "cardId": 82008
+        },
+        {
+          "cardId": 82026
+        },
+        {
+          "cardId": 82010
+        },
+        {
+          "cardId": 82019
+        },
+        {
+          "cardId": 82022
+        },
+        {
+          "cardId": 82024
+        },
+        {
+          "cardId": 82012
+        },
+        {
+          "cardId": 82011
+        },
+        {
+          "cardId": 82025
+        },
+        {
+          "cardId": 82009
+        },
+        {
+          "cardId": 82037
+        },
+        {
+          "cardId": 82027
+        },
+        {
+          "cardId": 82018
+        },
+        {
+          "cardId": 82020
+        },
+        {
+          "cardId": 82036
+        },
+        {
+          "cardId": 82032
+        },
+        {
+          "cardId": 82033
+        },
+        {
+          "cardId": 82013
+        },
+        {
+          "cardId": 82014
+        },
+        {
+          "cardId": 82028
+        },
+        {
+          "cardId": 82015
+        },
+        {
+          "cardId": 82029
+        },
+        {
+          "cardId": 82035
+        },
+        {
+          "cardId": 82030
+        },
+        {
+          "cardId": 82034
+        },
+        {
+          "cardId": 82031
+        },
+        {
+          "cardId": 82023
+        },
+        {
+          "cardId": 82017
+        }
+      ],
+      "totalPoints": 30,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "Nationals Park"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Live Level 2 - Washington Nationals",
+      "type": "count",
+      "requiredCount": 29,
+      "reward": "Live Collection Reward - Historical All-Star RP Tyler Clippard WAS 2014, Standard Pack",
+      "category": "Live Series",
+      "cards": [
+        {
+          "cardId": 82021
+        },
+        {
+          "cardId": 82016
+        },
+        {
+          "cardId": 82008
+        },
+        {
+          "cardId": 82026
+        },
+        {
+          "cardId": 82010
+        },
+        {
+          "cardId": 82019
+        },
+        {
+          "cardId": 82022
+        },
+        {
+          "cardId": 82024
+        },
+        {
+          "cardId": 82012
+        },
+        {
+          "cardId": 82011
+        },
+        {
+          "cardId": 82025
+        },
+        {
+          "cardId": 82009
+        },
+        {
+          "cardId": 82037
+        },
+        {
+          "cardId": 82027
+        },
+        {
+          "cardId": 82018
+        },
+        {
+          "cardId": 82020
+        },
+        {
+          "cardId": 82036
+        },
+        {
+          "cardId": 82032
+        },
+        {
+          "cardId": 82033
+        },
+        {
+          "cardId": 82013
+        },
+        {
+          "cardId": 82014
+        },
+        {
+          "cardId": 82028
+        },
+        {
+          "cardId": 82015
+        },
+        {
+          "cardId": 82029
+        },
+        {
+          "cardId": 82035
+        },
+        {
+          "cardId": 82030
+        },
+        {
+          "cardId": 82034
+        },
+        {
+          "cardId": 82031
+        },
+        {
+          "cardId": 82023
+        },
+        {
+          "cardId": 82017
+        }
+      ],
+      "totalPoints": 30,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84072
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Charlie Sweeney Hitting",
+      "type": "count",
+      "requiredCount": 33,
+      "reward": "2x Diamond Pack, 2x Gold Pack, Park: 1927 Sportsmans Park",
+      "category": "Launch Deck",
+      "cards": [
+        {
+          "cardId": 82877
+        },
+        {
+          "cardId": 82705
+        },
+        {
+          "cardId": 82889
+        },
+        {
+          "cardId": 84378
+        },
+        {
+          "cardId": 84354
+        },
+        {
+          "cardId": 82904
+        },
+        {
+          "cardId": 83680
+        },
+        {
+          "cardId": 83631
+        },
+        {
+          "cardId": 82709
+        },
+        {
+          "cardId": 83723
+        },
+        {
+          "cardId": 83609
+        },
+        {
+          "cardId": 83722
+        },
+        {
+          "cardId": 83704
+        },
+        {
+          "cardId": 83655
+        },
+        {
+          "cardId": 84177
+        },
+        {
+          "cardId": 84576
+        },
+        {
+          "cardId": 82908
+        },
+        {
+          "cardId": 83733
+        },
+        {
+          "cardId": 83738
+        },
+        {
+          "cardId": 83776
+        },
+        {
+          "cardId": 82708
+        },
+        {
+          "cardId": 83781
+        },
+        {
+          "cardId": 82720
+        },
+        {
+          "cardId": 82719
+        },
+        {
+          "cardId": 82728
+        },
+        {
+          "cardId": 83790
+        },
+        {
+          "cardId": 82712
+        },
+        {
+          "cardId": 83740
+        },
+        {
+          "cardId": 82914
+        },
+        {
+          "cardId": 83782
+        },
+        {
+          "cardId": 83794
+        },
+        {
+          "cardId": 84180
+        },
+        {
+          "cardId": 83799
+        },
+        {
+          "cardId": 83823
+        },
+        {
+          "cardId": 83779
+        }
+      ],
+      "totalPoints": 35,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 2
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "1927 Sportsmans Park"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Charlie Sweeney Pitching",
+      "type": "count",
+      "requiredCount": 34,
+      "reward": "2x Diamond Pack, 2x Gold Pack, Park: 1877 Louisville Baseball Park",
+      "category": "Launch Deck",
+      "cards": [
+        {
+          "cardId": 84280
+        },
+        {
+          "cardId": 83202
+        },
+        {
+          "cardId": 84270
+        },
+        {
+          "cardId": 84269
+        },
+        {
+          "cardId": 84041
+        },
+        {
+          "cardId": 83195
+        },
+        {
+          "cardId": 83208
+        },
+        {
+          "cardId": 84046
+        },
+        {
+          "cardId": 82677
+        },
+        {
+          "cardId": 83229
+        },
+        {
+          "cardId": 83311
+        },
+        {
+          "cardId": 84055
+        },
+        {
+          "cardId": 84049
+        },
+        {
+          "cardId": 84052
+        },
+        {
+          "cardId": 83239
+        },
+        {
+          "cardId": 84056
+        },
+        {
+          "cardId": 83267
+        },
+        {
+          "cardId": 83247
+        },
+        {
+          "cardId": 83257
+        },
+        {
+          "cardId": 83256
+        },
+        {
+          "cardId": 83281
+        },
+        {
+          "cardId": 83271
+        },
+        {
+          "cardId": 83278
+        },
+        {
+          "cardId": 84288
+        },
+        {
+          "cardId": 83294
+        },
+        {
+          "cardId": 82693
+        },
+        {
+          "cardId": 83320
+        },
+        {
+          "cardId": 83297
+        },
+        {
+          "cardId": 84091
+        },
+        {
+          "cardId": 82689
+        },
+        {
+          "cardId": 82687
+        },
+        {
+          "cardId": 84506
+        },
+        {
+          "cardId": 83321
+        },
+        {
+          "cardId": 84548
+        },
+        {
+          "cardId": 84529
+        }
+      ],
+      "totalPoints": 35,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 2
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 2
+        },
+        {
+          "type": "Park",
+          "park": "1877 Louisville Baseball Park"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "David Ross Catching Colleagues",
+      "type": "count",
+      "requiredCount": 10,
+      "reward": "2x silver Pack",
+      "category": "Launch Deck",
+      "cards": [
+        {
+          "cardId": 83364
+        },
+        {
+          "cardId": 84344
+        },
+        {
+          "cardId": 83526
+        },
+        {
+          "cardId": 83582
+        },
+        {
+          "cardId": 83672
+        },
+        {
+          "cardId": 82895
+        },
+        {
+          "cardId": 83933
+        },
+        {
+          "cardId": 83761
+        },
+        {
+          "cardId": 83758
+        },
+        {
+          "cardId": 83966
+        },
+        {
+          "cardId": 83791
+        }
+      ],
+      "totalPoints": 11,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "name": "David Ross Team Colleagues",
+      "type": "count",
+      "requiredCount": 14,
+      "reward": "2x silver Pack",
+      "category": "Launch Deck",
+      "cards": [
+        {
+          "cardId": 84230
+        },
+        {
+          "cardId": 82975
+        },
+        {
+          "cardId": 84018
+        },
+        {
+          "cardId": 83050
+        },
+        {
+          "cardId": 83661
+        },
+        {
+          "cardId": 84028
+        },
+        {
+          "cardId": 83612
+        },
+        {
+          "cardId": 83712
+        },
+        {
+          "cardId": 84106
+        },
+        {
+          "cardId": 83801
+        },
+        {
+          "cardId": 83204
+        },
+        {
+          "cardId": 83224
+        },
+        {
+          "cardId": 82921
+        },
+        {
+          "cardId": 83218
+        },
+        {
+          "cardId": 82684
+        }
+      ],
+      "totalPoints": 15,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Silver",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "name": "Grandy Man Launch Mission",
+      "type": "count",
+      "requiredCount": 10,
+      "reward": "Launch Deck Missions - Unsung Heroes CF Curtis Granderson DET 2008, 2x Standard Pack",
+      "category": "Launch Deck",
+      "cards": [
+        {
+          "cardId": 84352
+        },
+        {
+          "cardId": 84103
+        },
+        {
+          "cardId": 84342
+        },
+        {
+          "cardId": 84351
+        },
+        {
+          "cardId": 84125
+        },
+        {
+          "cardId": 83712
+        },
+        {
+          "cardId": 83762
+        },
+        {
+          "cardId": 83396
+        },
+        {
+          "cardId": 83667
+        },
+        {
+          "cardId": 83735
+        },
+        {
+          "cardId": 84144
+        },
+        {
+          "cardId": 83770
+        }
+      ],
+      "totalPoints": 12,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83696
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Yaz Launch Mission",
+      "type": "count",
+      "requiredCount": 14,
+      "reward": "Launch Deck Missions - Veteran Presence 1B Carl Yastrzemski BOS 1977, 2x Standard Pack",
+      "category": "Launch Deck",
+      "cards": [
+        {
+          "cardId": 82979
+        },
+        {
+          "cardId": 82977
+        },
+        {
+          "cardId": 83484
+        },
+        {
+          "cardId": 83607
+        },
+        {
+          "cardId": 83605
+        },
+        {
+          "cardId": 83873
+        },
+        {
+          "cardId": 83134
+        },
+        {
+          "cardId": 83226
+        },
+        {
+          "cardId": 83228
+        },
+        {
+          "cardId": 83883
+        },
+        {
+          "cardId": 84583
+        },
+        {
+          "cardId": 83264
+        },
+        {
+          "cardId": 83285
+        },
+        {
+          "cardId": 83291
+        },
+        {
+          "cardId": 83789
+        },
+        {
+          "cardId": 83978
+        }
+      ],
+      "totalPoints": 16,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83950
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "That\u0027s Gold Jerry. GOLD!!!",
+      "type": "count",
+      "requiredCount": 7,
+      "reward": "Unsung Heroes RP Jerry Blevins ATH 2012, Gold Pack",
+      "category": "Launch Deck",
+      "cards": [
+        {
+          "cardId": 83973
+        },
+        {
+          "cardId": 83751
+        },
+        {
+          "cardId": 83577
+        },
+        {
+          "cardId": 83967
+        },
+        {
+          "cardId": 84173
+        },
+        {
+          "cardId": 84152
+        },
+        {
+          "cardId": 84065
+        },
+        {
+          "cardId": 84289
+        },
+        {
+          "cardId": 83816
+        },
+        {
+          "cardId": 83891
+        },
+        {
+          "cardId": 84068
+        },
+        {
+          "cardId": 83987
+        },
+        {
+          "cardId": 84185
+        }
+      ],
+      "totalPoints": 13,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84584
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Passeggiata",
+      "type": "count",
+      "requiredCount": 8,
+      "reward": "2x Gold Pack",
+      "category": "Launch Deck",
+      "cards": [
+        {
+          "cardId": 84319
+        },
+        {
+          "cardId": 83465
+        },
+        {
+          "cardId": 83611
+        },
+        {
+          "cardId": 83630
+        },
+        {
+          "cardId": 83627
+        },
+        {
+          "cardId": 83739
+        },
+        {
+          "cardId": 83730
+        },
+        {
+          "cardId": 83719
+        },
+        {
+          "cardId": 83715
+        },
+        {
+          "cardId": 83976
+        },
+        {
+          "cardId": 83775
+        },
+        {
+          "cardId": 83966
+        },
+        {
+          "cardId": 83787
+        }
+      ],
+      "totalPoints": 13,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Maz Launch Mission",
+      "type": "count",
+      "requiredCount": 10,
+      "reward": "Launch Deck Missions - Hall of Fame 2B Bill Mazeroski PIT 1958, 2x Standard Pack",
+      "category": "Launch Deck",
+      "cards": [
+        {
+          "cardId": 83511
+        },
+        {
+          "cardId": 82909
+        },
+        {
+          "cardId": 83528
+        },
+        {
+          "cardId": 83593
+        },
+        {
+          "cardId": 82911
+        },
+        {
+          "cardId": 84111
+        },
+        {
+          "cardId": 84376
+        },
+        {
+          "cardId": 83760
+        },
+        {
+          "cardId": 83788
+        },
+        {
+          "cardId": 84174
+        },
+        {
+          "cardId": 84382
+        },
+        {
+          "cardId": 83832
+        }
+      ],
+      "totalPoints": 12,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84581
+        },
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Low-Level BABIP Kings",
+      "type": "count",
+      "requiredCount": 10,
+      "reward": "2x Standard Pack",
+      "category": "Launch Deck",
+      "cards": [
+        {
+          "cardId": 84329
+        },
+        {
+          "cardId": 83645
+        },
+        {
+          "cardId": 83351
+        },
+        {
+          "cardId": 82715
+        },
+        {
+          "cardId": 84343
+        },
+        {
+          "cardId": 83524
+        },
+        {
+          "cardId": 84380
+        },
+        {
+          "cardId": 83783
+        },
+        {
+          "cardId": 83340
+        },
+        {
+          "cardId": 83698
+        }
+      ],
+      "totalPoints": 10,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Standard",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "Live Level 1 - AL Central",
+      "type": "missions",
+      "requiredCount": 5,
+      "reward": "2x Artifact pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        19,
+        15,
+        21,
+        25,
+        35
+      ],
+      "totalPoints": 5,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Artifact",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "name": "Live Level 1 - NL West",
+      "type": "missions",
+      "requiredCount": 5,
+      "reward": "2x Artifact pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        1,
+        17,
+        29,
+        45,
+        49
+      ],
+      "totalPoints": 5,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Artifact",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Live Level 1 - NL Central",
+      "type": "missions",
+      "requiredCount": 5,
+      "reward": "2x Artifact pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        11,
+        13,
+        33,
+        43,
+        51
+      ],
+      "totalPoints": 5,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Artifact",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Live Level 1 - AL West",
+      "type": "missions",
+      "requiredCount": 5,
+      "reward": "2x Artifact pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        3,
+        23,
+        27,
+        47,
+        55
+      ],
+      "totalPoints": 5,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Artifact",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "name": "Live Level 1 - AL East",
+      "type": "missions",
+      "requiredCount": 5,
+      "reward": "2x Artifact pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        7,
+        9,
+        39,
+        53,
+        57
+      ],
+      "totalPoints": 5,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Artifact",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "name": "Live Level 1 - NL East",
+      "type": "missions",
+      "requiredCount": 5,
+      "reward": "2x Artifact pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        5,
+        31,
+        37,
+        41,
+        59
+      ],
+      "totalPoints": 5,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Artifact",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "name": "Charlie Sweeney Complete",
+      "type": "missions",
+      "requiredCount": 2,
+      "reward": "Launch Deck Missions - Snapshot SP Charlie Sweeney SL5 1884, Diamond Pack",
+      "category": "Launch Deck",
+      "cards": [],
+      "missionIds": [
+        62,
+        61
+      ],
+      "totalPoints": 2,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83329
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "name": "David Ross Complete",
+      "type": "missions",
+      "requiredCount": 2,
+      "reward": "Launch Deck Missions - Snapshot C David Ross ATL 2009, Gold Pack",
+      "category": "Launch Deck",
+      "cards": [],
+      "missionIds": [
+        63,
+        64
+      ],
+      "totalPoints": 2,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83574
+        },
+        {
+          "type": "Pack",
+          "packType": "Gold",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "name": "Live Level 2 - AL Central",
+      "type": "missions",
+      "requiredCount": 6,
+      "reward": "Live Collection Reward - Snapshot SP Red Faber CWS 1921, Diamond Pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        20,
+        16,
+        22,
+        26,
+        36,
+        71
+      ],
+      "totalPoints": 6,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84090
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "name": "Live Level 2 - NL West",
+      "type": "missions",
+      "requiredCount": 6,
+      "reward": "Live Collection Reward - Hall of Fame 1B Fred McGriff SD 1992, Diamond Pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        2,
+        18,
+        30,
+        46,
+        50,
+        72
+      ],
+      "totalPoints": 6,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83805
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "name": "Live Level 2 - NL Central",
+      "type": "missions",
+      "requiredCount": 6,
+      "reward": "Live Collection Reward - Historical All-Star SP Bob Friend PIT 1960, Diamond Pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        12,
+        14,
+        34,
+        44,
+        52,
+        73
+      ],
+      "totalPoints": 6,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 84086
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "name": "Live Level 2 - AL West",
+      "type": "missions",
+      "requiredCount": 6,
+      "reward": "Live Collection Reward - Hardware Heroes 3B Home Run Baker PHA 1911, Diamond Pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        4,
+        24,
+        28,
+        48,
+        56,
+        74
+      ],
+      "totalPoints": 6,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 82735
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "name": "Live Level 2 - AL East",
+      "type": "missions",
+      "requiredCount": 6,
+      "reward": "Live Collection Reward - Historical All-Star SS Xander Bogaerts BOS 2019, Diamond Pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        8,
+        10,
+        40,
+        54,
+        58,
+        75
+      ],
+      "totalPoints": 6,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83961
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "name": "LIVE LEVEL 1 COMPLETE",
+      "type": "missions",
+      "requiredCount": 6,
+      "reward": "Perfect Pack, Park: 1927 Yankee Stadium, Artifact: Live Mission Silver",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        75,
+        71,
+        74,
+        76,
+        73,
+        72
+      ],
+      "totalPoints": 6,
+      "rewards": [
+        {
+          "type": "Pack",
+          "packType": "Perfect",
+          "count": 1
+        },
+        {
+          "type": "Park",
+          "park": "1927 Yankee Stadium"
+        },
+        {
+          "type": "Artifact",
+          "artifact": "Live Mission Silver"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "name": "Live Level 2 - NL East",
+      "type": "missions",
+      "requiredCount": 6,
+      "reward": "Live Collection Reward - Hardware Heroes CF Lenny Dykstra PHI 1990, Diamond Pack",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        6,
+        32,
+        38,
+        42,
+        60,
+        76
+      ],
+      "totalPoints": 6,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 82753
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "name": "Historical Launch Missions",
+      "type": "missions",
+      "requiredCount": 12,
+      "reward": "Artifact: Historical Mission, 2x Diamond Pack",
+      "category": "Launch Deck",
+      "cards": [],
+      "missionIds": [
+        62,
+        61,
+        77,
+        66,
+        69,
+        63,
+        64,
+        78,
+        65,
+        67,
+        68,
+        70
+      ],
+      "totalPoints": 12,
+      "rewards": [
+        {
+          "type": "Artifact",
+          "artifact": "Historical Mission"
+        },
+        {
+          "type": "Pack",
+          "packType": "Diamond",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "name": "Live Level 2 - American League",
+      "type": "missions",
+      "requiredCount": 3,
+      "reward": "Live AL Collection - Hall of Fame C Joe Mauer MIN 2006, Park: 1992 SkyDome",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        83,
+        79,
+        82
+      ],
+      "totalPoints": 3,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83804
+        },
+        {
+          "type": "Park",
+          "park": "1992 SkyDome"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "name": "Live Level 2 - National League",
+      "type": "missions",
+      "requiredCount": 3,
+      "reward": "Live NL Collection - Historical All-Star SP Carl Hubbell NY1 1934 , Park: 1949 Polo Grounds",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        85,
+        81,
+        80
+      ],
+      "totalPoints": 3,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83325
+        },
+        {
+          "type": "Park",
+          "park": "1949 Polo Grounds"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "name": "LIVE LEVEL 2 COMPLETE",
+      "type": "missions",
+      "requiredCount": 2,
+      "reward": "Live Full Collection - Snapshot CF Tris Speaker BOS 1910, Park: 1984 Fenway Park, Artifact: Live Mission Gold",
+      "category": "Live Series",
+      "cards": [],
+      "missionIds": [
+        87,
+        88
+      ],
+      "totalPoints": 2,
+      "rewards": [
+        {
+          "type": "Card",
+          "cardId": 83846
+        },
+        {
+          "type": "Park",
+          "park": "1984 Fenway Park"
+        },
+        {
+          "type": "Artifact",
+          "artifact": "Live Mission Gold"
+        }
+      ]
+    }
+  ]
+}

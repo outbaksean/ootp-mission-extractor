@@ -39,7 +39,8 @@ public class FullTransformationService
         "Playoff Moments",
         "World Series Start",
         "Holiday Times",
-        "Final Mission Set"
+        "Final Mission Set",
+        "Packs"
     };
 
     public List<ValidationError> Run()
@@ -203,6 +204,11 @@ public class FullTransformationService
                     {
                         cards.Add(new MissionCard { CardId = entry.CardId });
                     }
+                    else if (_cardMapping.TryLookupByStrippedTitle(detail, out var strippedEntry, out var strippedTitle))
+                    {
+                        cards.Add(new MissionCard { CardId = strippedEntry.CardId });
+                        Console.WriteLine($"[Stripped Title Match] '{detail}' -> '{strippedTitle}'");
+                    }
                     else
                     {
                         cards.Add(new MissionCard { CardId = 0 });
@@ -230,6 +236,12 @@ public class FullTransformationService
                     {
                         cardId = entry.CardId;
                         mappedPoints = CardValueToPoints(entry.CardValue);
+                    }
+                    else if (_cardMapping.TryLookupByStrippedTitle(cleanTitle, out var strippedEntry, out var strippedTitle))
+                    {
+                        cardId = strippedEntry.CardId;
+                        mappedPoints = CardValueToPoints(strippedEntry.CardValue);
+                        Console.WriteLine($"[Stripped Title Match] '{cleanTitle}' -> '{strippedTitle}'");
                     }
                     else
                     {

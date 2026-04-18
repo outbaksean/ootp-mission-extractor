@@ -66,6 +66,27 @@ var validationService = app.Services.GetRequiredService<LightweightValidationSer
 var fullTransformService = app.Services.GetRequiredService<FullTransformationService>();
 var loadVerifiedService = app.Services.GetRequiredService<LoadVerifiedService>();
 
+// GET /api/live-mission-rewards
+var liveMissionRewardsCsvPath = Path.GetFullPath("data/LiveMissionRewards.csv", AppContext.BaseDirectory);
+app.MapGet("/api/live-mission-rewards", () =>
+{
+    if (!File.Exists(liveMissionRewardsCsvPath))
+        return Results.NotFound(new { error = "LiveMissionRewards.csv not found." });
+
+    var lines = File.ReadAllLines(liveMissionRewardsCsvPath);
+    var result = new List<object>();
+    foreach (var line in lines.Skip(1))
+    {
+        if (string.IsNullOrWhiteSpace(line)) continue;
+        var fields = ParseSimpleCsvLine(line);
+        if (fields.Length < 3) continue;
+        var name = fields[0].Replace(" [+]", "").Trim();
+        var reward = System.Text.RegularExpressions.Regex.Replace(fields[1], @"\s+Variant\b.*?(?=,|$)", "");
+        result.Add(new { name, reward, status = fields[2] });
+    }
+    return Results.Ok(result);
+});
+
 // GET /api/cards
 app.MapGet("/api/cards", () =>
     cardMappingService.Cards
@@ -503,6 +524,37 @@ app.Start();
 var appUrl = app.Urls.FirstOrDefault() ?? "http://localhost:60564";
 Process.Start(new ProcessStartInfo { FileName = appUrl, UseShellExecute = true });
 await app.WaitForShutdownAsync();
+
+static string[] ParseSimpleCsvLine(string line)
+{
+    var fields = new List<string>();
+    int i = 0;
+    while (i <= line.Length)
+    {
+        if (i == line.Length) { fields.Add(""); break; }
+        if (line[i] == '"')
+        {
+            i++;
+            var sb = new System.Text.StringBuilder();
+            while (i < line.Length)
+            {
+                if (line[i] == '"' && i + 1 < line.Length && line[i + 1] == '"') { sb.Append('"'); i += 2; }
+                else if (line[i] == '"') { i++; break; }
+                else sb.Append(line[i++]);
+            }
+            if (i < line.Length && line[i] == ',') i++;
+            fields.Add(sb.ToString());
+        }
+        else
+        {
+            int comma = line.IndexOf(',', i);
+            if (comma == -1) { fields.Add(line[i..]); break; }
+            fields.Add(line[i..comma]);
+            i = comma + 1;
+        }
+    }
+    return fields.ToArray();
+}
 
 static async Task<string> CaptureConsole(Func<Task> action)
 {

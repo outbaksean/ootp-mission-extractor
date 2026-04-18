@@ -25,4 +25,5 @@ public enum PackType
     DefensiveDiamond,
     PowerDiamond,
     SpotlightImmortals,
+    Artifact,
 }
